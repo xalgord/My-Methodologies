@@ -1,5 +1,34 @@
-# My-Methodologies
-Tools and method that I personally use for Recon and Exploitations
+- https://github.com/maurosoria/dirsearch
+- https://github.com/MobSF/Mobile-Security-Framework-MobSF
+- https://github.com/DanMcInerney/xsscrapy
+
+- Burp Suite
+- SecLists
+- whatcms
+- Striker
+- OWASP ZAP
+- Dirb
+- Scrapy
+- Dirbuster
+- Gobuster
+- Wfuzz
+- CyberChef
+- Sublist3r	
+- Massdns
+- Dnsenum
+- Knockpy
+- nmap 
+- Masscan
+- Sn1per
+- XSStrike
+- Sqlmap
+- Wpscan
+- Joomscan
+- CMSmap
+- Builtwith
+- Wappalyzer
+- wafw00f
+
 
 - passive hunter
 - a-mass
@@ -11,11 +40,6 @@ Tools and method that I personally use for Recon and Exploitations
 - open redirect x
 - massdns
 - paramspider
-
-- https://github.com/maurosoria/dirsearch
-- https://github.com/MobSF/Mobile-Security-Framework-MobSF
-- https://github.com/DanMcInerney/xsscrapy
-
 
 ### XSS Payloads (xsshunter)
 - xalgord.xss.ht

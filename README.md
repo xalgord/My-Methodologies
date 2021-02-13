@@ -95,3 +95,30 @@ python3 ragno.py -d test.vulnweb.com -s -q -o ragno_urls.txt | cat ragno_urls.tx
 ```
 amass enum -brute -o output.txt -d example.com -v
 ```
+
+## Detect Low Hanging Bugs and Sensitive Information like API Keys, Secrets etc. including JS Files and HTML Pages
+
+
+First run Amass Scan and save its output and then run Sublist3r with bruteforce mode and also save its output in different file. 
+Now open a Website such as https://www.textfixer.com/tools/remove-duplicate-lines.php to remove duplicate subdomains.
+
+Tool: https://github.com/BitTheByte/Eagle
+
+Basic Usage:
+```
+python3 main.py -f domains.txt
+```
+
+Advanced Usage:
+```
+python3 main.py -f domains.txt -w 10 --db output.db.json
+```
+
+To check API keys if they vulnerable or not, use a tool such as gmapsapiscanner, it is usefull to save the time by automating the process and also if it gets any Vulnerable API, it will generate its POC itself.
+
+Tool: https://github.com/ozguralp/gmapsapiscanner
+
+Usage:
+```
+python3 maps_api_scanner_python3.py
+```

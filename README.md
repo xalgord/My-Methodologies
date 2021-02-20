@@ -153,7 +153,7 @@ cat domain.txt | httpx -o domainhttpx.txt
 ```
 3-
 ```
-cat domainhttpx.txt | nuclei -t /home/orwa/nuclei-templates
+cat domainhttpx.txt | nuclei -t /home/xalgord/nuclei-templates
 ```
 DONE 😎
 

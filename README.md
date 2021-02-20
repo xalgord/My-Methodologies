@@ -149,7 +149,7 @@ amass enum -passive -norecursive -noalts -d domain .com -o domain.txt
 ```
 2-
 ```
-cat domian.txt | httpx -o domainhttpx.txt
+cat domain.txt | httpx -o domainhttpx.txt
 ```
 3-
 ```

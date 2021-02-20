@@ -287,7 +287,7 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 
 GET /?q=xss	 &nbsp;&nbsp;&nbsp;    POST /q=xss	
 
-## Some of the awesome people on twitter
+## Some awesome people on twitter
 
 - [@Dark_Knight](https://twitter.com/_Dark_Knight_)
 - [@El3ctr0Byt3s](https://twitter.com/El3ctr0Byt3s)

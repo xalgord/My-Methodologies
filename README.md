@@ -284,4 +284,5 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 <svg•onload=alert(1)>
 
 7. Try to change request method (POST instead of GET):
-GET /?q=xss	    POST /q=xss	
+
+GET /?q=xss	          POST /q=xss	

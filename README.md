@@ -139,3 +139,20 @@ and on sqlmap
 sqlmap -r sql.txt --force-ssl --level 5 --risk 3 --dbs -p parameter
 ```
 and you have a valid SQL INJ 😎😎
+
+
+## Reflected XSS On private program
+
+1- 
+```
+amass enum -passive -norecursive -noalts -d domain .com -o domain.txt
+```
+2-
+```
+cat domian.txt | httpx -o domainhttpx.txt
+```
+3-
+```
+cat domainhttpx.txt | nuclei -t /home/orwa/nuclei-templates
+```
+DONE Smiling face with sunglasses

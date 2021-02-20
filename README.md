@@ -281,7 +281,7 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 <a/href="j&Tab;a&Tab;v&Tab;asc&Tab;ri&Tab;pt:alert&lpar;1&rpar;">
 
 6. Try to bypass whitespaces using a bullet:
-<svg•onload=alert(1)>
+<svg•onload=alert(document.domain)>
 
 7. Try to change request method (POST instead of GET):
 

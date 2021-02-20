@@ -127,11 +127,15 @@ python3 maps_api_scanner_python3.py
 *try login with admin admin and send login request  to burp
 
 *do an active scan
+
 if show SQL injection with parameter 
+
 #POC 
+
 copy request in txt 
+
 and on sqlmap 
 ```
 sqlmap -r sql.txt --force-ssl --level 5 --risk 3 --dbs -p parameter
 ```
-and you have a valid SQL INJ Smiling face with sunglassesSmiling face with sunglasses 😎😎
+and you have a valid SQL INJ 😎😎

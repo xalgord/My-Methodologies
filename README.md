@@ -155,4 +155,4 @@ cat domian.txt | httpx -o domainhttpx.txt
 ```
 cat domainhttpx.txt | nuclei -t /home/orwa/nuclei-templates
 ```
-DONE Smiling face with sunglasses
+DONE 😎

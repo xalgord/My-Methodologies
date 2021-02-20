@@ -233,4 +233,4 @@ Protip: While you are doing GitHub dorking, try also GitDorker (made by @obheda1
 
 Detailed information about GitDorker can be found here.
 
-Also check related tip ![BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8_github_dorks_for_finding_secrets).
+Also check related tip [BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8_github_dorks_for_finding_secrets).

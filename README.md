@@ -187,3 +187,19 @@ All you have to do is to provide your Bugcrowd token like this:
 bcscope -t <YOUR-TOKEN-HERE> -c 2 -p
 ```
 ![alt text](https://www.infosecmatter.com/wp-content/uploads/2020/10/list-scope-for-bugcrowd-bug-bounty-programs.jpg)
+
+Quite convenient and pretty useful!
+
+Get the tool here:
+
+- https://github.com/sw33tLie/bcscope
+
+## Chaining file uploads with other vulns
+When testing file upload functionalities in a web application, try setting the filename to the following values:
+
+```
+- ../../../tmp/lol.png —> for path traversal
+- sleep(10)-- -.jpg —> for SQL injection
+- <svg onload=alert(document.domain)>.jpg/png —> for XSS
+- ; sleep 10; —> for command injections
+```

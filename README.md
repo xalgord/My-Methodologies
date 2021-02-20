@@ -285,4 +285,4 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 
 7. Try to change request method (POST instead of GET):
 
-GET /?q=xss	          POST /q=xss	
+GET /?q=xss	 &nbsp;&nbsp;&nbsp;    POST /q=xss	

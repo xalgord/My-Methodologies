@@ -229,8 +229,35 @@ Here’s another list of GitHub dorks shared by @GodfatherOrwa for identifying v
 target.service-now password
 some time only "target"
 ```
-Protip: While you are doing GitHub dorking, try also GitDorker (made by @obheda12) which automates the whole process and which contains 400+ dorks in total, for easy bug bounty wins.
+Protip: While you are doing GitHub dorking, try also [GitDorker](https://github.com/obheda12/GitDorker) (made by [@obheda12](https://twitter.com/obheda12)) which automates the whole process and which contains 400+ dorks in total, for easy bug bounty wins.
 
-Detailed information about GitDorker can be found here.
+Detailed information about GitDorker can be found [here](https://medium.com/@obheda12/gitdorker-a-new-tool-for-manual-github-dorking-and-easy-bug-bounty-wins-92a0a0a6b8d5).
 
 Also check related tip [BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8_github_dorks_for_finding_secrets).
+
+
+## Simple reflected XSS scenario
+
+Here’s an interesting bug bounty write-up leading to a reflected XSS (Cross-Site Scripting by visiting a link).
+
+The author was able to successfully identify and exploit XSS despite the fact that the application was filtering some characters and keywords (possibly protected by WAF).
+
+Here’s what [@_justYnot](https://twitter.com/_justYnot) did in detail:
+
+1. Run subfinder -d target.com | httprobe -c 100 > target.txt
+2. Run cat target.txt | waybackurls | gf xss | kxss
+3. Got a URL which had all the special characters unfiltered and the parameter was callback=
+4. Tried some basic XSS payloads but they weren’t working, the site was filtering some keywords in the payload (like script and alert)
+5. Then he referred to the [@PortSwigger](https://twitter.com/PortSwigger) XSS cheat sheet ([link](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet))
+6. After trying some payloads, one payload with event as onbegin worked and XSS executed successfully!
+7. Made a good report, sent it to the company last month and got rewarded $$
+
+This is a perfect example why we should never give up when things get difficult. When you’ve got a lead, you have to keep pushing to get the reward!
+Here’s list of tools [@_justYnot](https://twitter.com/_justYnot) used:
+
+- https://github.com/projectdiscovery/subfinder
+- https://github.com/tomnomnom/httprobe
+- https://github.com/tomnomnom/waybackurls
+- https://github.com/tomnomnom/gf
+- https://github.com/1ndianl33t/Gf-Patterns (xss pattern)
+- https://github.com/tomnomnom/hacks/tree/master/kxss

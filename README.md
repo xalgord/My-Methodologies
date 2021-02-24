@@ -315,3 +315,13 @@ GET /?q=xss	 &nbsp;&nbsp;&nbsp;    POST /q=xss
 - [@RathiArpeet](https://twitter.com/RathiArpeet)
 - [@Alra3ees](https://twitter.com/Alra3ees)
 - [@N008x](https://twitter.com/N008x)
+
+
+
+
+
+
+## Find all Subdomains in a Single Shot
+```
+cat domains.txt | while read url; do dom=$(assetfinder --subs-only $url|tee $url.txt;crobat -s $url|tee -a $url.txt|subfinder -d $url -silent|tee -a $url.txt |cat $url.txt|httprobe|sort -u > final-$url.txt);echo -e "\e[1;33m[-]Working with $url""\e[1;32m\n  -> done File saved. Please check :)""\n";done
+```

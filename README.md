@@ -408,3 +408,6 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 ![Screenshot_2021-03-16-16-34-20-695_com google android youtube](https://user-images.githubusercontent.com/48483027/111305580-284b7580-867d-11eb-8704-dee84bb789e9.jpg)
 
 <hr>
+
+## Mindmap
+<img width="1366" alt="mindmap" src="https://user-images.githubusercontent.com/48483027/111863466-c68f5200-8981-11eb-9569-38fb5eacf8c9.png">

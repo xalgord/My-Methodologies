@@ -409,5 +409,7 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 
 <hr>
 
-## Mindmap
+## Mindmaps for Penetration Testing
 <img width="1366" alt="mindmap" src="https://user-images.githubusercontent.com/48483027/111863466-c68f5200-8981-11eb-9569-38fb5eacf8c9.png">
+
+![assessment-mindset](https://user-images.githubusercontent.com/48483027/111871365-8ba41300-89af-11eb-944f-287a74f48a7f.png)

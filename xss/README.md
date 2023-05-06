@@ -5,6 +5,7 @@
 3. Waybackurls | gau
 4. https://github.com/s0md3v/Arjun
 5. https://github.com/hakluke/hakrawler
+6. https://github.com/PortSwigger/param-miner
 
 Combine all in a file and remove duplicates.
 
@@ -12,4 +13,8 @@ Combine all in a file and remove duplicates.
 1. https://github.com/s0md3v/XSStrike
 2. https://github.com/hahwul/dalfox
 
+
+Resources:
+- https://blog.yeswehack.com/yeswerhackers/parameter-discovery-quick-guide-to-start/
+- https://infosecwriteups.com/tale-of-my-first-xss-27f622bc47c0
 <hr>

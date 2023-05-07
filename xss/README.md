@@ -32,3 +32,6 @@ dalfox file domain.txt -w 20 --silence
 - Scrape all urls from the domain using gau
 - then sort the result using grep command: `cat url.txt | grep “utm_”`
 - do testing
+
+resources:
+- https://santoshdbobade.medium.com/how-i-got-reflected-cross-site-scripting-rxss-on-manchester-metropolitan-university-700b36cb4f53

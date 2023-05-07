@@ -1,5 +1,5 @@
 ```
 $ amass enum -brute -passive -d abercrombie.com | httpx -silent -status-code | tee domain.txt
 $ cat domain.txt | grep 200 | cut -d "[" -f1 > urls.txt
-$ gf xss td.com.txt | grep -Eo 'https?://[^\"]+' > tdfinal.txt
+$ gf xss domain.txt | grep -Eo 'https?://[^\"]+' > domain.txt
 ```

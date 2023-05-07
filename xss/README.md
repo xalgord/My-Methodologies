@@ -24,3 +24,11 @@ Resources:
 gf xss domain.txt | grep -Eo 'https?://[^\"]+' > domain.txt
 dalfox file domain.txt -w 20 --silence
 ```
+
+<hr>
+
+## another technique to find XSS
+
+- Scrape all urls from the domain using gau
+- then sort the result using grep command: `cat url.txt | grep “utm_”`
+- do testing

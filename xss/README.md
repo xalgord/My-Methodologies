@@ -18,3 +18,8 @@ Resources:
 - https://blog.yeswehack.com/yeswerhackers/parameter-discovery-quick-guide-to-start/
 - https://infosecwriteups.com/tale-of-my-first-xss-27f622bc47c0
 <hr>
+
+## dalfox usage:
+```
+dalfox file domain.txt -w 20 --silence
+```

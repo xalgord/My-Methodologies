@@ -21,6 +21,6 @@ Resources:
 
 ## dalfox usage:
 ```
-gf xss td.com.txt | grep -Eo 'https?://[^\"]+' > tdfinal.txt
+gf xss domain.txt | grep -Eo 'https?://[^\"]+' > domain.txt
 dalfox file domain.txt -w 20 --silence
 ```

@@ -35,3 +35,11 @@ dalfox file domain.txt -w 20 --silence
 
 resources:
 - https://santoshdbobade.medium.com/how-i-got-reflected-cross-site-scripting-rxss-on-manchester-metropolitan-university-700b36cb4f53
+
+
+<hr>
+
+## Custom useful XSS Attack Vector
+```
+"><img/src=x onerror=alert(/XSS/)//
+```

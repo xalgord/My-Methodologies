@@ -41,5 +41,5 @@ resources:
 
 ## Custom useful XSS Attack Vector
 ```
-"><img/src=x onerror=alert(/XSS/)//
+testing"><img/src=x onerror=alert(/XSS/)//
 ```

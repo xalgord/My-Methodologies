@@ -11,3 +11,9 @@ python3 takeover.py -l all.txt -v
 ```
 dalfox file gf_xss.txt -w 50 --silence
 ```
+
+### Breach-Parse ([https://github.com/hmaverickadams/breach-parse](https://github.com/hmaverickadams/breach-parse))
+
+```
+breach-parse @gmail.com gmail.txt
+```

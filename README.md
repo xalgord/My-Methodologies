@@ -44,7 +44,7 @@ description: For Personal Reference
 * massdns
 * paramspider
 
-### Email Discovery Tool
+### Gathering Breached Credentials
 
 * [https://github.com/hmaverickadams/breach-parse](https://github.com/hmaverickadams/breach-parse)
 

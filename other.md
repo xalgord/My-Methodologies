@@ -18,3 +18,7 @@ The best terminal-based subdomain scanner tools to find subdomains
 * Anubis
 * Lepus
 * subfinder
+
+## Subdomain Enumeration Guide
+
+* [https://sidxparab.gitbook.io/subdomain-enumeration-guide/passive-enumeration/passive-sources](https://sidxparab.gitbook.io/subdomain-enumeration-guide/passive-enumeration/passive-sources)

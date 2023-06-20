@@ -236,3 +236,27 @@ chaos , subfinder , finddomain, assetfinder, amass
 | github-subdomains | –           |                 |                    |                  |                     |                |                   |                                             | github-subdomains -d domain.com -k -q -t .github\_tokens -o result.txt                                                                                              |
 | findomain         | –           |                 |                    |                  |                     |                |                   |                                             | findomain –quiet -t domain.com                                                                                                                                      |
 | OneForAll         | –           |                 |                    |                  |                     |                |                   |                                             | python3 oneforall.py –target domain.com –alive False –brute False –dns False –fmt json –path results/ run && cat results/domain.com.json \| jq ‘.\[] \| .subdomain’ |
+
+## Feroxbuster sorting result example:
+
+```
+egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6
+
+```
+
+*   **egrep** - regular expression to give only those urls which have 200 in the beginning of the line.\
+
+
+    <figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+
+*   **tr** - trim the spaces\
+
+
+    <figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+
+*   **cut** - give cut the delimeter of single space using -d " " and then it asks for the the filed number by -f 6\
+
+
+    <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

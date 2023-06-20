@@ -260,3 +260,19 @@ egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6
 
 
     <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+## Sent the multiple urls to Burp or Zap using Command Line:&#x20;
+
+```
+set urls (egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6)
+```
+
+it will set the `urls` variable which have urls stored
+
+```
+for u in $urls
+    curl $u --proxy http://localhost:8080
+end
+```
+
+it will send all the urls requests to the configured proxy via web browser.

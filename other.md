@@ -22,3 +22,7 @@ The best terminal-based subdomain scanner tools to find subdomains
 ## Subdomain Enumeration Guide
 
 * [https://sidxparab.gitbook.io/subdomain-enumeration-guide/passive-enumeration/passive-sources](https://sidxparab.gitbook.io/subdomain-enumeration-guide/passive-enumeration/passive-sources)
+
+## Writeup About XSS Finding
+
+* [https://infosecwriteups.com/how-i-was-able-to-find-50-cross-site-scripting-xss-security-vulnerabilities-on-bugcrowd-public-ba33db2b0ab1](https://infosecwriteups.com/how-i-was-able-to-find-50-cross-site-scripting-xss-security-vulnerabilities-on-bugcrowd-public-ba33db2b0ab1)

@@ -274,3 +274,9 @@ curl $(cat filtered.txt) --proxy http://localhost:8080
 ```
 
 it will send all the urls requests to the configured proxy via web browser.
+
+## FFUF Usage:
+
+```
+ffuf -p 0.1 -t 1 -w ~/wordlists/content.txt -u https://www.website.com
+```

@@ -132,3 +132,152 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+## Written in Go
+
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"io/ioutil"
+	"net/http"
+	"os"
+	"strings"
+	"sync"
+)
+
+type Result struct {
+	URL     string
+	HasXSS  bool
+}
+
+func checkXSSPayload(url string, outputFileName string, verbose bool, resultChan chan<- Result, wg *sync.WaitGroup) {
+	defer wg.Done()
+
+	resp, err := http.Get(url)
+	if err != nil {
+		resultChan <- Result{URL: url, HasXSS: false}
+		return
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode == http.StatusOK {
+		html, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			resultChan <- Result{URL: url, HasXSS: false}
+			return
+		}
+
+		if strings.Contains(string(html), "xalgord") {
+			if verbose {
+				fmt.Printf("\033[1;33mXSS payload found in:\033[0m \033[1;32m%s\033[0m\n", url)
+			}
+
+			if outputFileName != "" {
+				f, err := os.OpenFile(outputFileName, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
+				if err != nil {
+					resultChan <- Result{URL: url, HasXSS: false}
+					return
+				}
+				defer f.Close()
+
+				if _, err := f.WriteString(url + "\n"); err != nil {
+					resultChan <- Result{URL: url, HasXSS: false}
+					return
+				}
+			}
+
+			resultChan <- Result{URL: url, HasXSS: true}
+			return
+		}
+	}
+
+	resultChan <- Result{URL: url, HasXSS: false}
+}
+
+func processURLs(urlsFile string, numThreads int, outputFileName string, verbose bool) {
+	file, err := os.Open(urlsFile)
+	if err != nil {
+		fmt.Printf("\033[1;31mError: Failed to open file '%s'.\033[0m\n", urlsFile)
+		return
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	urls := make([]string, 0)
+	for scanner.Scan() {
+		urls = append(urls, strings.TrimSpace(scanner.Text()))
+	}
+
+	totalURLs := len(urls)
+	resultChan := make(chan Result, totalURLs)
+
+	var wg sync.WaitGroup
+	wg.Add(totalURLs)
+
+	fmt.Println("Checking URLs...")
+	for _, url := range urls {
+		go checkXSSPayload(url, outputFileName, verbose, resultChan, &wg)
+	}
+
+	wg.Wait()
+	close(resultChan)
+
+	xssPayloadsFound := make([]string, 0)
+	for result := range resultChan {
+		if result.HasXSS {
+			xssPayloadsFound = append(xssPayloadsFound, result.URL)
+		}
+	}
+
+	fmt.Println()
+	fmt.Printf("\033[1;33m-------- Summary --------\033[0m\n")
+	fmt.Printf("Total URLs: %d\n", totalURLs)
+	fmt.Printf("XSS Payloads Found: %d\n", len(xssPayloadsFound))
+	fmt.Printf("URLs with XSS Payloads: %d/%d\n", len(xssPayloadsFound), totalURLs)
+
+	if verbose && len(xssPayloadsFound) > 0 {
+		fmt.Printf("\033[1;33m-------- URLs with XSS Payloads --------\033[0m\n")
+		for _, url := range xssPayloadsFound {
+			fmt.Println(url)
+		}
+	}
+}
+
+func main() {
+	if len(os.Args) < 2 {
+		fmt.Println("Usage: reflectioner urls_file [num_threads] [output_file] [verbose]")
+		return
+	}
+
+	urlsFile := os.Args[1]
+	numThreads := 1
+	outputFile := ""
+	verbose := false
+
+	if len(os.Args) > 2 {
+		numThreads = parseThreads(os.Args[2])
+	}
+
+	if len(os.Args) > 3 {
+		outputFile = os.Args[3]
+	}
+
+	if len(os.Args) > 4 && os.Args[4] == "true" {
+		verbose = true
+	}
+
+	processURLs(urlsFile, numThreads, outputFile, verbose)
+}
+
+func parseThreads(input string) int {
+	threads := 1
+	_, err := fmt.Sscanf(input, "%d", &threads)
+	if err != nil {
+		threads = 1
+	}
+	return threads
+}
+```

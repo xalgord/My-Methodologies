@@ -243,7 +243,7 @@ chaos , subfinder , finddomain, assetfinder, amass
 feroxbuster -u https://api.au1.defend.egress.com -w /usr/share/seclists/Discovery/Web-Content/common.txt -n -t 1
 ```
 
-Feroxbuster is powerful and may, with defaults, overload your Juice Shop server! Be mindful of your option flags: `-L`, `-t`, and `--rate-limit` are your friends. You may want to start slow with `-L 1 -t 1` and a smaller wordlist to see how it goes.
+Feroxbuster is powerful and may, with defaults, overload your server! Be mindful of your option flags: `-L`, `-t`, and `--rate-limit` are your friends. You may want to start slow with `-L 1 -t 1` and a smaller wordlist to see how it goes.
 
 ```
 egrep "^200" feroxbuster.txt | tr -s " " | cut -d " " -f 6

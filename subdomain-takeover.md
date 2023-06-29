@@ -15,3 +15,9 @@ while read url; do
     subjack -w $url.txt -o $url_takeover.txt
 done < $filename
 ```
+
+## Using nuclei for subdomain takeover
+
+```
+nuclei -l path/to/subdomains.txt -t /home/parrot/nuclei-templates-main/takeovers/detect-all-takeovers.yaml
+```

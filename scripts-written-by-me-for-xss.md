@@ -2,7 +2,7 @@
 
 ## XSS Combiner
 
-```
+```python
 import sys
 
 def combine_urls_with_payload(xss_payload, urls):
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
 ## XSS Checker
 
-```
+```python
 import sys
 import os
 import asyncio

@@ -1,4 +1,4 @@
-# Scripts written by me for XSS
+# 📜 Scripts written by me for XSS
 
 ## XSS Combiner
 

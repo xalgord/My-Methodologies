@@ -28,3 +28,7 @@ The best terminal-based subdomain scanner tools to find subdomains
 ## Writeup About XSS Finding
 
 * [https://infosecwriteups.com/how-i-was-able-to-find-50-cross-site-scripting-xss-security-vulnerabilities-on-bugcrowd-public-ba33db2b0ab1](https://infosecwriteups.com/how-i-was-able-to-find-50-cross-site-scripting-xss-security-vulnerabilities-on-bugcrowd-public-ba33db2b0ab1)
+
+## Writeup about SQL Injection
+
+* [https://medium.com/@a7madhacck/how-i-found-my-first-sql-injection-2-in-two-different-website-9c6c324b53c](https://medium.com/@a7madhacck/how-i-found-my-first-sql-injection-2-in-two-different-website-9c6c324b53c)

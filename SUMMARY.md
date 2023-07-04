@@ -9,3 +9,4 @@
   * [🔎 Recon Like a Boss](recon-strategies-by-other-hackers/recon-like-a-boss.md)
   * [🔎 Recon With Me](recon-strategies-by-other-hackers/recon-with-me.md)
   * [🔎 Extensive Recon Guide For Bug Hunting](recon-strategies-by-other-hackers/extensive-recon-guide-for-bug-hunting.md)
+  * [🔎 Deep-Subdomains-Enumeration-Methodology](recon-strategies-by-other-hackers/deep-subdomains-enumeration-methodology.md)

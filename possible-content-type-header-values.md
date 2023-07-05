@@ -1,4 +1,4 @@
-# Possible "Content-Type" Header values
+# 🌀 Possible "Content-Type" Header values
 
 You can find every content types here: [http://www.iana.org/assignments/media-types/media-types.xhtml](http://www.iana.org/assignments/media-types/media-types.xhtml)
 

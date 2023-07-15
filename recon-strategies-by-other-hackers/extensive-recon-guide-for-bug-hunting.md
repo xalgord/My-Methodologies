@@ -11,7 +11,7 @@ Recon will help you to increase attack surface area and may allow you to get mor
 <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/72x72/1f539.png" alt="🔹" data-size="line"> Recon = Finding untouched endpoints = Fewer duplicates\
 <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/72x72/1f539.png" alt="🔹" data-size="line"> Recon = Sharpening your axe before attack
 
-***
+
 
 ### 1. SUBDOMAIN ENUMERATION
 
@@ -43,7 +43,7 @@ $ dnsx -silent -d $domain -w ~/wordlist.txt -o ~/dnsbrute.txt
 $ cat domain.txt | dnsgen - | massdns -r ~/resolvers.txt -o S -w alive.txt
 ```
 
-***
+
 
 ### 2. FILTERING THE SUBDOMAINS WITH HTTPX
 
@@ -67,7 +67,7 @@ $ cat domain-subs.txt | aquatone -ports xlarge -scan-timeout 300 -out aquatone.t
 * **Altdns**: [https://github.com/infosec-au/altdns](https://github.com/infosec-au/altdns)
   * Usage: `./altdns.py -i subdomains.txt -o data_output -w words.txt -r -s output.txt`
 
-***
+
 
 ### 3. SCREENSHOT TOOLS
 
@@ -78,7 +78,7 @@ These tools are capable of taking screenshots of websites to view offline anytim
 * **Eyewitness**: [https://github.com/FortyNorthSecurity/EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness)
 * **httpscreenshot**: [https://github.com/breenmachine/httpscreenshot](https://github.com/breenmachine/httpscreenshot)
 
-***
+
 
 ### 4. BROADENING YOUR SCOPE
 
@@ -89,7 +89,7 @@ More targets lead to more option which ultimately lead to more opportunities.
 * tools.whoisxmlapi.com
 * [https://whois.arin.net/](https://whois.arin.net/)
 
-***
+
 
 ### 5. WHAT TO DO AFTER ENUMERATION? | Collecting URLs
 
@@ -97,7 +97,7 @@ More targets lead to more option which ultimately lead to more opportunities.
 * **Gau**: [https://github.com/lc/gau](https://github.com/lc/gau)
 * **web archieve**: [https://web.archive.org/cdx/search/cdx?url=\*.target.com\&fl=original\&collapse=](https://web.archive.org/cdx/search/cdx?url=\*.target.com\&fl=original\&collapse=) urlkey
 
-***
+
 
 ### 6. TIPS AND TRICKS
 
@@ -128,7 +128,7 @@ More targets lead to more option which ultimately lead to more opportunities.
 
 * **Tool Link**: [https://github.com/eslam3kl/SQLiDetector](https://github.com/eslam3kl/SQLiDetector)
 
-***
+
 
 ### 7. SHODAN FOR RECON
 
@@ -145,14 +145,14 @@ More targets lead to more option which ultimately lead to more opportunities.
 
 **Example Writeup**:- [How I found XSS by searching in Shodan - Writeup](https://infosecwriteups.com/6943b799e648)
 
-***
+
 
 ### 8. CENSYS FOR RECON
 
 **Censys**: [https://www.censys.io/](https://www.censys.io/)\
 **Example Writeup**:- [Let’s fuck waf using Origin IP: My approach on censys By Deepak Dhiman](https://virdoexhunter.com/lets-fuck-waf-using-origin-ip-my-approach-on-censys/)
 
-***
+
 
 ### 9. FUZZING FOR SENSITIVE FILES & DIRECTORIES
 
@@ -165,7 +165,7 @@ $ for i in cat host.txt; do ffuf -u $i/FUZZ -w wordlist.txt -mc 200,302,401 -se 
 
 * **Tip**: Fuzz for “/wp-content/debug.log” || Sometimes they contain SQL error, which can be chained.
 
-***
+
 
 ### 10. FINDING SOURCE/BACKUP FILES
 
@@ -178,7 +178,7 @@ $ for i in cat host.txt; do ffuf -u $i/FUZZ -w wordlist.txt -mc 200,302,401 -se 
 
 **Tool Link**: [https://github.com/musana/fuzzuli](https://github.com/musana/fuzzuli)
 
-***
+
 
 ### 11. GOOGLE & GITHUB DORKING
 
@@ -200,7 +200,7 @@ $ for i in cat host.txt; do ffuf -u $i/FUZZ -w wordlist.txt -mc 200,302,401 -se 
 
 * Also search in Google groups, Gitlabs.
 
-***
+
 
 ### 12. JAVASCRIPT\[JS] FILES RECON
 
@@ -225,14 +225,14 @@ $ for i in cat host.txt; do ffuf -u $i/FUZZ -w wordlist.txt -mc 200,302,401 -se 
 * Use that request to fuzz for sensitive directory.
 * **Tools**:- [JSFScan.sh](https://github.com/KathanP19/JSFScan.sh) , Jsminer {Burp Extension} , [Trufflehog](https://github.com/trufflesecurity/trufflehog)
 
-***
+
 
 ### 13. SOME AUTOMATION FRAMEWORKS
 
 <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/72x72/1f539.png" alt="🔹" data-size="line">**Sudomy**: [https://github.com/Screetsec/Sudomy](https://github.com/Screetsec/Sudomy)\
 <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/72x72/1f539.png" alt="🔹" data-size="line">**Reconftw**: [https://github.com/six2dez/reconftw](https://github.com/six2dez/reconftw)
 
-***
+
 
 ### Final Thoughts
 

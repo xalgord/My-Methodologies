@@ -284,3 +284,9 @@ it will send all the urls requests to the configured proxy via web browser.
 ```
 ffuf -p 0.1 -t 1 -w ~/wordlists/content.txt -u https://www.website.com
 ```
+
+## User Agent:
+
+```
+[Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/31.0]
+```

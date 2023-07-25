@@ -13,3 +13,4 @@
   * [🔎 How I hacked NASA and got 8 bugs ?](recon-strategies-by-other-hackers/how-i-hacked-nasa-and-got-8-bugs.md)
   * [🔎 Simple Recon Methodology](recon-strategies-by-other-hackers/simple-recon-methodology.md)
 * [🌀 Possible "Content-Type" Header values](possible-content-type-header-values.md)
+* [🎯 XSS nuclei template CVE-2023-24488.yaml](xss-nuclei-template-cve-2023-24488.yaml.md)

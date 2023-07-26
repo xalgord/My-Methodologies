@@ -12,5 +12,6 @@
   * [🔎 Deep-Subdomains-Enumeration-Methodology](recon-strategies-by-other-hackers/deep-subdomains-enumeration-methodology.md)
   * [🔎 How I hacked NASA and got 8 bugs ?](recon-strategies-by-other-hackers/how-i-hacked-nasa-and-got-8-bugs.md)
   * [🔎 Simple Recon Methodology](recon-strategies-by-other-hackers/simple-recon-methodology.md)
+  * [🔎 How I was able to find 4 Cross-site scripting (XSS) on vulnerability disclosure program ?](recon-strategies-by-other-hackers/how-i-was-able-to-find-4-cross-site-scripting-xss-on-vulnerability-disclosure-program.md)
 * [🌀 Possible "Content-Type" Header values](possible-content-type-header-values.md)
 * [🎯 XSS nuclei template CVE-2023-24488.yaml](xss-nuclei-template-cve-2023-24488.yaml.md)

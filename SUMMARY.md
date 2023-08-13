@@ -14,6 +14,7 @@
   * [🔎 Simple Recon Methodology](recon-strategies-by-other-hackers/simple-recon-methodology.md)
   * [🔎 How I was able to find 4 Cross-site scripting (XSS) on vulnerability disclosure program ?](recon-strategies-by-other-hackers/how-i-was-able-to-find-4-cross-site-scripting-xss-on-vulnerability-disclosure-program.md)
   * [🔎 From Self XSS to Account Take Over(ATO)](recon-strategies-by-other-hackers/from-self-xss-to-account-take-over-ato.md)
-  * [Leakage of credential data for full control over the target.](recon-strategies-by-other-hackers/leakage-of-credential-data-for-full-control-over-the-target..md)
+  * [🔎 Leakage of credential data for full control over the target.](recon-strategies-by-other-hackers/leakage-of-credential-data-for-full-control-over-the-target..md)
+  * [🔎 Finding Time Based SQLi injections : Edition 2023](recon-strategies-by-other-hackers/finding-time-based-sqli-injections-edition-2023.md)
 * [🌀 Possible "Content-Type" Header values](possible-content-type-header-values.md)
 * [🎯 XSS nuclei template CVE-2023-24488.yaml](xss-nuclei-template-cve-2023-24488.yaml.md)

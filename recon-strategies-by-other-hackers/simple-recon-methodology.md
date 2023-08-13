@@ -2,7 +2,7 @@
 description: 'source: https://infosecwriteups.com/simple-recon-methodology-920f5c5936d4'
 ---
 
-# Simple Recon Methodology
+# 🔎 Simple Recon Methodology
 
 Hey folks, here we back again with the most important topic in penetration testing or Bug Bounty Hunting “Recon” or “Information gathering”.
 

@@ -4,7 +4,7 @@ description: >-
   https://melguerdawi.medium.com/from-self-xss-to-account-take-over-ato-812c194b61cf
 ---
 
-# From Self XSS to Account Take Over(ATO)
+# 🔎 From Self XSS to Account Take Over(ATO)
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:388/1*Wfb593bpG6-Ywg9xi_XX2w.jpeg" alt="" height="162" width="310"><figcaption></figcaption></figure>
 

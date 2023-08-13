@@ -4,7 +4,7 @@ description: >-
   https://melguerdawi.medium.com/leakage-of-credential-data-for-full-control-over-the-target-a7297c735b40
 ---
 
-# Leakage of credential data for full control over the target.
+# 🔎 Leakage of credential data for full control over the target.
 
 Hello everyone, it has been a whole year since I first discovered a vulnerability, so I have decided to publish an article about it.
 

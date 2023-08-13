@@ -18,3 +18,4 @@
   * [🔎 Finding Time Based SQLi injections : Edition 2023](recon-strategies-by-other-hackers/finding-time-based-sqli-injections-edition-2023.md)
 * [🌀 Possible "Content-Type" Header values](possible-content-type-header-values.md)
 * [🎯 XSS nuclei template CVE-2023-24488.yaml](xss-nuclei-template-cve-2023-24488.yaml.md)
+* [🕶 Google Dorks](google-dorks.md)

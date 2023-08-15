@@ -1,4 +1,10 @@
-# SQL injection through HTTP headers
+---
+description: >-
+  source:
+  https://resources.infosecinstitute.com/topics/application-security/sql-injection-http-headers/
+---
+
+# 🔎 SQL injection through HTTP headers
 
 During vulnerability assessment or penetration testing, identifying the input vectors of the target application is a primordial step. Sometimes, when dealing with Web application testing, verification routines related to [SQL injection](https://www.infosecinstitute.com/skills/courses/sql-injection/?utm\_source=resources\&utm\_medium=infosec+network\&utm\_campaign=skills+pricing\&utm\_content=hyperlink) flaws discovery are restricted to the GET and POST variables as the unique inputs vectors ever.
 

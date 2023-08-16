@@ -2,7 +2,7 @@
 description: 'description: For Personal Reference'
 ---
 
-# My Methodologies
+# 🧑🏫 My Methodologies
 
 * https://github.com/maurosoria/dirsearch
 * https://github.com/MobSF/Mobile-Security-Framework-MobSF
@@ -374,6 +374,22 @@ GET /?q=xss POST /q=xss
 <iMg src%3dN onerror%3dalert(0x0036A9)>
 <iMg src%3dN onerror%3dalert(0x000D98)>
 ```
+
+### Throw this into EVERY parameter you see
+
+```
+'"`><img src=x>${{7*7}}
+```
+
+```
+'"` =====> SQLi testing
+'"` ======> JS inject
+'"`> ======> html tag attribute inject
+<img src=x> =====> html inject
+${{7*7}} ======> CSTI
+```
+
+by @theXSSrat
 
 #### Nuclei CVE-2023-24488 Citrix XSS - Easy Bug Bounty
 

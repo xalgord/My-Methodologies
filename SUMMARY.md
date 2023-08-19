@@ -20,5 +20,6 @@
   * [🔎 Recon With Me](recon-strategies-by-other-hackers/recon-with-me.md)
   * [🔎 Simple Recon Methodology](recon-strategies-by-other-hackers/simple-recon-methodology.md)
   * [🔎 SQL injection through HTTP headers](recon-strategies-by-other-hackers/sql-injection-through-http-headers.md)
+  * [🔎 How to Get Unique Subdomains on Large scope](recon-strategies-by-other-hackers/how-to-get-unique-subdomains-on-large-scope.md)
 * [🎯 subdomain-enumeration](subdomain-enumeration/README.md)
 * [❌ xss](xss/README.md)

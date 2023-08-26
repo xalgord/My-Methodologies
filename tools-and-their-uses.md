@@ -20,9 +20,11 @@ breach-parse @gmail.com gmail.txt
 
 ## Dirsearch
 
+{% code overflow="wrap" %}
 ```
 dirsearch -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sqlasp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip -i 200 — full-url -u https://target --deep-recursive
 ```
+{% endcode %}
 
 ## Subdomain Enumeration
 

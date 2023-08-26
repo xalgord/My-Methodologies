@@ -9,6 +9,7 @@
 * [🔧 Tools and their Uses](tools-and-their-uses.md)
 * [🎯 XSS nuclei template CVE-2023-24488.yaml](xss-nuclei-template-cve-2023-24488.yaml.md)
 * [🕵 Recon strategies by other Hackers](recon-strategies-by-other-hackers/README.md)
+  * [🔎 Find the treasure hidden inside JavaScript](recon-strategies-by-other-hackers/find-the-treasure-hidden-inside-javascript.md)
   * [🔎 Deep-Subdomains-Enumeration-Methodology](recon-strategies-by-other-hackers/deep-subdomains-enumeration-methodology.md)
   * [🔎 Extensive Recon Guide For Bug Hunting](recon-strategies-by-other-hackers/extensive-recon-guide-for-bug-hunting.md)
   * [🔎 Finding Time Based SQLi injections : Edition 2023](recon-strategies-by-other-hackers/finding-time-based-sqli-injections-edition-2023.md)

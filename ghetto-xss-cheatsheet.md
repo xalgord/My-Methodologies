@@ -2,7 +2,7 @@
 description: 'source: https://d3adend.org/xss/ghettoBypass'
 ---
 
-# Ghetto XSS Cheatsheet
+# ⛴ Ghetto XSS Cheatsheet
 
 ```
  _____ _          _   _          __   _______ _____   _____ _                _       _               _   

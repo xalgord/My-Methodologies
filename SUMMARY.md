@@ -25,5 +25,5 @@
   * [🔎 How to Get Unique Subdomains on Large scope](recon-strategies-by-other-hackers/how-to-get-unique-subdomains-on-large-scope.md)
 * [🎯 subdomain-enumeration](subdomain-enumeration/README.md)
 * [❌ xss](xss/README.md)
-* [Ghetto XSS Cheatsheet](ghetto-xss-cheatsheet.md)
+* [⛴ Ghetto XSS Cheatsheet](ghetto-xss-cheatsheet.md)
 * [🚀 Oneliners](oneliners.md)

@@ -4,46 +4,6 @@ description: 'description: For Personal Reference'
 
 # 🧑🏫 My Methodologies
 
-* https://github.com/maurosoria/dirsearch
-* https://github.com/MobSF/Mobile-Security-Framework-MobSF
-* https://github.com/DanMcInerney/xsscrapy
-* Burp Suite
-* SecLists
-* whatcms
-* Striker
-* OWASP ZAP
-* Dirb
-* Scrapy
-* Dirbuster
-* Gobuster
-* Wfuzz
-* CyberChef
-* Sublist3r
-* Massdns
-* Dnsenum
-* Knockpy
-* nmap
-* Masscan
-* Sn1per
-* XSStrike
-* Sqlmap
-* Wpscan
-* Joomscan
-* CMSmap
-* Builtwith
-* Wappalyzer
-* wafw00f
-* passive hunter
-* a-mass
-* subfinder
-* httpx
-* aquatone
-* dalfox
-* nuclei
-* open redirect x
-* massdns
-* paramspider
-
 #### Gathering Breached Credentials
 
 * [https://github.com/hmaverickadams/breach-parse](https://github.com/hmaverickadams/breach-parse)
@@ -169,6 +129,12 @@ sqlmap -r sql.txt --force-ssl --level 5 --risk 3 --dbs -p parameter
 ```
 
 and you have a valid SQL INJ 😎😎
+
+**SQL Injection Auth Bypass:**
+
+```
+' || 1=1 # /2
+```
 
 #### Blind SQL Injection payload:
 

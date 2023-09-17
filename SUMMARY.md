@@ -9,6 +9,7 @@
 * [🔧 Tools and their Uses](tools-and-their-uses.md)
 * [🎯 XSS nuclei template CVE-2023-24488.yaml](xss-nuclei-template-cve-2023-24488.yaml.md)
 * [🕵 Recon strategies by other Hackers](recon-strategies-by-other-hackers/README.md)
+  * [How i got more than 100 vulnerabilities in just one site? (zseano-challenge)](recon-strategies-by-other-hackers/how-i-got-more-than-100-vulnerabilities-in-just-one-site-zseano-challenge.md)
   * [🔎 JS is l0ve ❤️.](recon-strategies-by-other-hackers/js-is-l0ve-..md)
   * [🔎 My top 5 bookmarks that I consistently use for bug bounty and penetration testing.](recon-strategies-by-other-hackers/my-top-5-bookmarks-that-i-consistently-use-for-bug-bounty-and-penetration-testing..md)
   * [🔎 Find the treasure hidden inside JavaScript](recon-strategies-by-other-hackers/find-the-treasure-hidden-inside-javascript.md)

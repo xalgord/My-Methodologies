@@ -18,6 +18,12 @@ dalfox file gf_xss.txt -w 50 --silence
 breach-parse @gmail.com gmail.txt
 ```
 
+## Gau
+
+```
+xargs -a alive.txt -I@ sh -c 'gau --blacklist css,jpg,jpeg,JPEG,ott,svg,ttf,png,woff2,woff,eot,gif "@"' | tee -a gau.txt
+```
+
 ## Dirsearch
 
 {% code overflow="wrap" %}

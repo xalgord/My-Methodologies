@@ -32,8 +32,6 @@ dirsearch -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sqlasp,as
 ```
 {% endcode %}
 
-## Subdomain Enumeration
-
 ```bash
 #!/bin/bash
 

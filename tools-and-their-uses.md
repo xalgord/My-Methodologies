@@ -1,5 +1,7 @@
 # 🔧 Tools and their Uses
 
+### Bug Bounty Handbook: ([https://gowthams.gitbook.io/bughunter-handbook/](https://gowthams.gitbook.io/bughunter-handbook/))
+
 ### Takeover ([https://github.com/m4ll0k/takeover](https://github.com/m4ll0k/takeover))
 
 ```

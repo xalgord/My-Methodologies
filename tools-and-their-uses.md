@@ -2,6 +2,10 @@
 
 ### Bug Bounty Handbook: ([https://gowthams.gitbook.io/bughunter-handbook/](https://gowthams.gitbook.io/bughunter-handbook/))
 
+### Bug Bounty Tips: ([https://gowsundar.gitbook.io/book-of-bugbounty-tips/](https://gowsundar.gitbook.io/book-of-bugbounty-tips/))
+
+***
+
 ### Takeover ([https://github.com/m4ll0k/takeover](https://github.com/m4ll0k/takeover))
 
 ```

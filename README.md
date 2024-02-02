@@ -12,6 +12,12 @@ description: 'description: For Personal Reference'
 
 * [https://github.com/epinna/weevely3](https://github.com/epinna/weevely3)
 
+**Set domain scope (burpsuite)**
+
+```
+.*\.target\.com$
+```
+
 #### XSS recon methodology
 
 ▶ cat domains.txt | waybackurls > urls

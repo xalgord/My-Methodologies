@@ -18,19 +18,31 @@ dalfox file gf_xss.txt -w 50 --silence
 breach-parse @gmail.com gmail.txt
 ```
 
-## Gau
+### Gau
 
 ```
 xargs -a alive.txt -I@ sh -c 'gau --blacklist css,jpg,jpeg,JPEG,ott,svg,ttf,png,woff2,woff,eot,gif "@"' | tee -a gau.txt
 ```
 
-## Dirsearch
+### Dirsearch
 
 {% code overflow="wrap" %}
 ```
 dirsearch -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sqlasp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip -i 200 — full-url -u https://target --deep-recursive
 ```
 {% endcode %}
+
+### Masscan
+
+```
+masscan -p1–65535 -iL $TARGET_LIST — max-rate 10000 -oG $TARGET_OUTPUT
+```
+
+### Nmap
+
+```
+nmap -S 192.168.0.1 -d — max-scan-delay 10 -oA logs/tcp-allports-%T-%D -iL tcp-allports-1M-ips — max-retries 1 — randomize-hosts -p- -PS21,22,23,25,53,80,443 -T4 — min-hostgroup 256
+```
 
 ```bash
 #!/bin/bash

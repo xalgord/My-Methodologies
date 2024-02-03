@@ -26,6 +26,7 @@
   * [🔎 Simple Recon Methodology](recon-strategies-by-other-hackers/simple-recon-methodology.md)
   * [🔎 SQL injection through HTTP headers](recon-strategies-by-other-hackers/sql-injection-through-http-headers.md)
   * [🔎 How to Get Unique Subdomains on Large scope](recon-strategies-by-other-hackers/how-to-get-unique-subdomains-on-large-scope.md)
+  * [🔎 Static Analysis of Client-Side JavaScript for pen testers and bug bounty hunters](recon-strategies-by-other-hackers/static-analysis-of-client-side-javascript-for-pen-testers-and-bug-bounty-hunters.md)
 * [🎯 subdomain-enumeration](subdomain-enumeration/README.md)
 * [❌ xss](xss/README.md)
 * [⛴ Ghetto XSS Cheatsheet](ghetto-xss-cheatsheet.md)

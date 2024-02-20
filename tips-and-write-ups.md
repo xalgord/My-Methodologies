@@ -1,5 +1,7 @@
 # ✍ Tips and Write-ups
 
+###
+
 ### Bug Bounty Handbook: ([https://gowthams.gitbook.io/bughunter-handbook/](https://gowthams.gitbook.io/bughunter-handbook/))
 
 ### Bug Bounty Tips: ([https://gowsundar.gitbook.io/book-of-bugbounty-tips/](https://gowsundar.gitbook.io/book-of-bugbounty-tips/))
@@ -38,3 +40,7 @@ The best terminal-based subdomain scanner tools to find subdomains
 ## Writeup about SQL Injection
 
 * [https://medium.com/@a7madhacck/how-i-found-my-first-sql-injection-2-in-two-different-website-9c6c324b53c](https://medium.com/@a7madhacck/how-i-found-my-first-sql-injection-2-in-two-different-website-9c6c324b53c)
+
+### 403 Bypass tool:
+
+{% embed url="https://github.com/Dheerajmadhukar/4-ZERO-3" %}

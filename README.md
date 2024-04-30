@@ -2,7 +2,7 @@
 description: 'description: For Personal Reference'
 ---
 
-# 🧑🏫 My Methodologies
+# 🧑‍🏫 My Methodologies
 
 #### Gathering Breached Credentials
 
@@ -399,6 +399,12 @@ intitle:"Citrix Gateway" -site:[citrix.com](http://citrix.com/)
 
 ```
 cat domains.txt | while read url; do dom=$(assetfinder --subs-only $url|tee $url.txt;crobat -s $url|tee -a $url.txt|subfinder -d $url -silent|tee -a $url.txt |cat $url.txt|httprobe|sort -u > final-$url.txt);echo -e "\e[1;33m[-]Working with $url""\e[1;32m\n  -> done File saved. Please check :)""\n";done
+```
+
+#### VHOST Fuzzing using FFUF
+
+```
+ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://ffuf.me
 ```
 
 #### Check all methods on domainlist for Information Disclosure

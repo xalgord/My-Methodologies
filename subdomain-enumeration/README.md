@@ -9,5 +9,5 @@ $ gf xss domain.txt | grep -Eo 'https?://[^\"]+' > domain.txt
 #### Track new subdomains:
 
 ```bash
-gungnir -r domain.txt | anew subs-com.txt | notify -id asset
+gungnir -r all-domains.txt | anew all-subs.txt | tee -a new-assets.txt | notify -id asset
 ```

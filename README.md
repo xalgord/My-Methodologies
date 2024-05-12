@@ -407,6 +407,12 @@ cat domains.txt | while read url; do dom=$(assetfinder --subs-only $url|tee $url
 ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://ffuf.me
 ```
 
+#### Feroxbuster fir directory fuzzing
+
+```
+feroxbuster -u $url -w /usr/share/wordlists/onelistforallshort.txt -C 404,403,429,400,401,405,302 -k
+```
+
 #### Check all methods on domainlist for Information Disclosure
 
 ```

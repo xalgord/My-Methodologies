@@ -201,7 +201,7 @@ There is a new tool in town called bcscope which can get you the scope of all bu
 All you have to do is to provide your Bugcrowd token like this:
 
 ```
-bcscope -t <YOUR-TOKEN-HERE> -c 2 -p
+bbscope -t <YOUR-TOKEN-HERE> -c 2 -p
 ```
 
 ![alt text](https://www.infosecmatter.com/wp-content/uploads/2020/10/list-scope-for-bugcrowd-bug-bounty-programs.jpg)

@@ -1,4 +1,4 @@
-# ✍ Tips and Write-ups
+# ✍️ Tips and Write-ups
 
 ###
 
@@ -44,3 +44,9 @@ The best terminal-based subdomain scanner tools to find subdomains
 ### 403 Bypass tool:
 
 {% embed url="https://github.com/Dheerajmadhukar/4-ZERO-3" %}
+
+### Filter Subdomains:
+
+```bash
+awk -F[/.] 'NF > 5' subdomains.txt 
+```

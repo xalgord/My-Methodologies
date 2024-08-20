@@ -50,3 +50,9 @@ The best terminal-based subdomain scanner tools to find subdomains
 ```bash
 awk -F[/.] 'NF > 5' subdomains.txt 
 ```
+
+### Sort unique domains based on their content length
+
+```bash
+cat cl.txt | awk '{print $NF, $0}' | sort -u -k1,1 | cut -d' ' -f2- 
+```

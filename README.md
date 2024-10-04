@@ -508,6 +508,11 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 
 ***
 
+### **Mobile App Testing Guide:**
+
+* **Android:** [Intercept traffic with BurpSuite](https://www.youtube.com/watch?v=xp8ufidc514).
+* **iOS:** [Proxy traffic using BurpSuite](https://www.youtube.com/watch?v=VVQtVeUxcdM).
+
 #### Opposite to Keyhacks -> nokeyhacks:
 
 {% embed url="https://gitlab.com/dee-see/notkeyhacks" %}

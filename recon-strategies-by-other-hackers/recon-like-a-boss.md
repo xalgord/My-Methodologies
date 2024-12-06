@@ -10,7 +10,7 @@ Effective recon is an essential part of any successful web security assessment o
 
 In this article, we’ll take a step-by-step approach to web recon, starting with the basics and building up to more advanced techniques.
 
-## Agenda <a href="#4c7c" id="4c7c"></a>
+## Agenda <a href="#id-4c7c" id="id-4c7c"></a>
 
 * Increase Your Attack Area\
   • Determine Technologies used by Website.\
@@ -18,18 +18,18 @@ In this article, we’ll take a step-by-step approach to web recon, starting wit
   • Github Recon\
   • Content Discovery
 
-## Increase Your Attack Area <a href="#1b8c" id="1b8c"></a>
+## Increase Your Attack Area <a href="#id-1b8c" id="id-1b8c"></a>
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:275/1*FKn2kdozY5XH-nCmEytS_Q.jpeg" alt="" height="183" width="275"><figcaption></figcaption></figure>
 
-### Recon- Go Back in Time <a href="#337c" id="337c"></a>
+### Recon- Go Back in Time <a href="#id-337c" id="id-337c"></a>
 
 Wayback Machine to view old files like robots.txt\
 and URLs
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:640/1*JlmXilQ-R1evogebQy6MAw.jpeg" alt="" height="400" width="640"><figcaption></figcaption></figure>
 
-### Tools are out to automate this <a href="#2171" id="2171"></a>
+### Tools are out to automate this <a href="#id-2171" id="id-2171"></a>
 
 **waybackurls.py**
 
@@ -43,11 +43,11 @@ Download:
 
 [https://gist.github.com/mhmdiaa/2742c5e147d49a804b408bfed3d32d07](https://gist.github.com/mhmdiaa/2742c5e147d49a804b408bfed3d32d07)
 
-## Sub-domains Discovery <a href="#6294" id="6294"></a>
+## Sub-domains Discovery <a href="#id-6294" id="id-6294"></a>
 
 * Brute force on main domain
 * Some scripts to automate this task\
-  **– Knockpy:-**\
+  &#xNAN;**– Knockpy:-**\
   [https://github.com/guelfoweb/knock](https://github.com/guelfoweb/knock)
 
 **Usage:** ./knockpy target.com
@@ -105,12 +105,12 @@ data\_output -w words.txt -r -s output.txt
 
 **Now We Have**\
 WaybackURls\
-\+\
++\
 Subdomains\
-\+\
++\
 Subdomains of Subdomains
 
-## Sub-domain Validation <a href="#4f53" id="4f53"></a>
+## Sub-domain Validation <a href="#id-4f53" id="id-4f53"></a>
 
 **Tool: EyeWitness** ([https://github.com/ChrisTruncer/EyeWitness](https://github.com/ChrisTruncer/EyeWitness))
 
@@ -120,20 +120,20 @@ report with screenshots of sub-domain\
 
 **Tool: Grab Them All** (Mozilla addon)
 
-## Other sites on the same domain <a href="#8e87" id="8e87"></a>
+## Other sites on the same domain <a href="#id-8e87" id="id-8e87"></a>
 
 [www.yougetsignal.com](http://www.yougetsignal.com/)
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:580/1*5LJcRKberYdTJFjvbF0tOA.png" alt="" height="362" width="580"><figcaption></figcaption></figure>
 
-### Now We Have <a href="#2409" id="2409"></a>
+### Now We Have <a href="#id-2409" id="id-2409"></a>
 
 WaybackURls\
-\+\
++\
 Subdomains\
-\+\
++\
 Subdomains of Subdomains\
-\+\
++\
 Other Sites on the same Domain
 
 ## Target IP Range <a href="#f990" id="f990"></a>
@@ -147,18 +147,18 @@ Other Sites on the same Domain
   • From 98.136.0.0–98.139.255.255\
   • Which is 260,000 unique IP addresses
 
-### Got Huge IP Range <a href="#685d" id="685d"></a>
+### Got Huge IP Range <a href="#id-685d" id="id-685d"></a>
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:273/1*sEoIwwYnzX1nSDTWqk07vA.jpeg" alt="" height="184" width="273"><figcaption></figcaption></figure>
 
-### Real Case Study <a href="#8c4a" id="8c4a"></a>
+### Real Case Study <a href="#id-8c4a" id="id-8c4a"></a>
 
 Patrik Fehrenbach (@ITSecurityguard)\
 Wrote a Bash script to download phpinfo.php\
 file (if found) from Yahoo! IP range\
 (98.136.0.0–98.139.255.255)
 
-### Bash Script <a href="#7fef" id="7fef"></a>
+### Bash Script <a href="#id-7fef" id="id-7fef"></a>
 
 ```
 #!/bin/bash
@@ -166,7 +166,7 @@ for ipa in 98.13{6..9}.{0..255}.{0..255}; do
 wget -t 1 -T 5 http://${ipa}/phpinfo.php; done&
 ```
 
-## Takeaways <a href="#90de" id="90de"></a>
+## Takeaways <a href="#id-90de" id="id-90de"></a>
 
 • When hacking, consider a company’s entire\
 infrastructure. I know that Patrik has employed\
@@ -180,7 +180,7 @@ impossible to scan manually.
 • When performing this type of testing,\
 automation is hugely important.
 
-## Find New Endpoints from JS Files <a href="#6fd3" id="6fd3"></a>
+## Find New Endpoints from JS Files <a href="#id-6fd3" id="id-6fd3"></a>
 
 * Tools used
 
@@ -203,7 +203,7 @@ files and extract urls
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:636/1*NQcFk48iJdKzCAmo4xJnXQ.png" alt="" height="522" width="636"><figcaption></figcaption></figure>
 
-## 2- Zscanner <a href="#1436" id="1436"></a>
+## 2- Zscanner <a href="#id-1436" id="id-1436"></a>
 
 * Once copied, paste them into urls.txt\
   • Put urls.txt file in the root of Zscanner\
@@ -220,7 +220,7 @@ files and extract urls
   JS-Scan root folder\
   Eg. c/xampp/js-scan/JS-output.txt
 
-## 3- JS-Scan <a href="#5f85" id="5f85"></a>
+## 3- JS-Scan <a href="#id-5f85" id="id-5f85"></a>
 
 * Open JS-Scan in browser
 
@@ -231,7 +231,7 @@ files and extract urls
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:700/1*wEaRdA19mtX3LgUTlKCpmQ.png" alt="" height="352" width="700"><figcaption></figcaption></figure>
 
-### Takeaways <a href="#5454" id="5454"></a>
+### Takeaways <a href="#id-5454" id="id-5454"></a>
 
 • Endpoints extracted from JS files are more\
 vulnerable then Endpoints defined in\
@@ -240,13 +240,13 @@ WebPages.\
 Endpoints defined in JS files.\
 • Developers & Testers don’t care about them.
 
-## Technologies Used by Web <a href="#147a" id="147a"></a>
+## Technologies Used by Web <a href="#id-147a" id="id-147a"></a>
 
 • **Wappalyzer** (Mozilla Addon)
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:241/1*UOPQOUQzR2Jx25ClE_8Q2A.png" alt="" height="209" width="241"><figcaption></figcaption></figure>
 
-## Amazon Web Services (AWS or S3 Buckets) <a href="#35f4" id="35f4"></a>
+## Amazon Web Services (AWS or S3 Buckets) <a href="#id-35f4" id="id-35f4"></a>
 
 * AWS Simple Storage Service (often shortened\
   to S3) is used by companies that don’t want to\
@@ -260,17 +260,17 @@ Endpoints defined in JS files.\
   certificates, passwords, content, databases\
   and other data.
 
-### What if target is vulnerable? <a href="#512c" id="512c"></a>
+### What if target is vulnerable? <a href="#id-512c" id="id-512c"></a>
 
 * You can get full access to S3 bucket\
   • You can download, upload and overwrite files
 
-### How to find S3 Buckets? <a href="#689d" id="689d"></a>
+### How to find S3 Buckets? <a href="#id-689d" id="id-689d"></a>
 
 * **Google Dork**\
   site: amazonaws.com inurl: yahoo\
-  **• Tool: S3 bucket finder**\
-  (Download: [https://digi.ninja/projects/bucket\_finder.php)](https://digi.ninja/projects/bucket\_finder.php\))
+  &#xNAN;**• Tool: S3 bucket finder**\
+  (Download: [https://digi.ninja/projects/bucket\_finder.php)](https://digi.ninja/projects/bucket_finder.php\))
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:700/1*__JjgvvRCnLgru-ZNPngpQ.png" alt="" height="136" width="700"><figcaption></figcaption></figure>
 
@@ -278,7 +278,7 @@ Endpoints defined in JS files.\
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:700/1*C8q90DRC-mi_aV5RzZnmmQ.png" alt="" height="343" width="700"><figcaption></figcaption></figure>
 
-## AWS HACKING <a href="#2576" id="2576"></a>
+## AWS HACKING <a href="#id-2576" id="id-2576"></a>
 
 * Install awscli in kali
 
@@ -292,25 +292,25 @@ Endpoints defined in JS files.\
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:700/1*IE8CphOAwfqCZaxdTnQY-A.png" alt="" height="67" width="700"><figcaption></figcaption></figure>
 
-### Now We Have <a href="#3308" id="3308"></a>
+### Now We Have <a href="#id-3308" id="id-3308"></a>
 
 WaybackURls\
-\+\
++\
 Subdomains\
-\+\
++\
 Subdomains of Subdomains\
-\+\
++\
 Other Sites on the same Domain\
-\+\
++\
 IP Range\
-\+\
++\
 New Endpoints From JS Files\
-\+\
++\
 S3 Buckets
 
 ## Github Recon <a href="#a103" id="a103"></a>
 
-### What you can find on Github? <a href="#6677" id="6677"></a>
+### What you can find on Github? <a href="#id-6677" id="id-6677"></a>
 
 • FTP Credentials\
 • Secret Keys \[API\_key, Aws\_secret key, etc.]\
@@ -365,7 +365,7 @@ specific extension which also reveal\
 technology used by Target.
 
 * **Google Dork:**\
-  \-site:target.com filetype:php\
+  -site:target.com filetype:php\
   \- site:target.com filetype:aspx\
   \- site:target.com filetype:swf (Shockwave Flash)\
   \- site:target.com filetype:wsdl
@@ -377,7 +377,7 @@ technology used by Target.
 \- site: target.com inurl:.php?user=\
 \- site: target.com inurl:.php?book=
 
-### Find Login Page <a href="#5788" id="5788"></a>
+### Find Login Page <a href="#id-5788" id="id-5788"></a>
 
 **• Google Dork**\
 \- site: target.com inurl:login.php\
@@ -386,31 +386,31 @@ technology used by Target.
 \- site: target.com inurl:register.php
 
 **(Note:** _if site has register page, there are chances_\
-_that site also have login page)_
+&#xNAN;_&#x74;hat site also have login page)_
 
-### Find Directory Structure <a href="#49d9" id="49d9"></a>
+### Find Directory Structure <a href="#id-49d9" id="id-49d9"></a>
 
 **• Google Dork:**\
-\-site: target.com intext: “index of /”
+-site: target.com intext: “index of /”
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:700/1*hVneoXZrQUQfkAxeG4Gk0g.png" alt="" height="412" width="700"><figcaption></figcaption></figure>
 
 ### Find important Stuff <a href="#efe2" id="efe2"></a>
 
 **• Google Dork:**\
-\-site: target.com filetype:txt\
+-site: target.com filetype:txt\
 \- site: target.com inurl:.php.txt\
-\-site: target.com ext:txt
+-site: target.com ext:txt
 
 _In most cases you will find robot.txt_\
-_But sometimes you will find really juicy stuff_
+&#xNAN;_&#x42;ut sometimes you will find really juicy stuff_
 
-### Tools: <a href="#5f02" id="5f02"></a>
+### Tools: <a href="#id-5f02" id="id-5f02"></a>
 
 **– GoBuster** \[[https://github.com/OJ/gobuster](https://github.com/OJ/gobuster)]\
 **Use:**\
 gobuster –w wordlist.txt –u [http://trgt.com](http://trgt.com/)\
-**– Dirbuster**
+&#xNAN;**– Dirbuster**
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:700/1*Uqu0fM8qkvOD9_44QMst8Q.png" alt="" height="497" width="700"><figcaption></figcaption></figure>
 

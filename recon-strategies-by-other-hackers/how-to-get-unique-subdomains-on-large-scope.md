@@ -24,7 +24,7 @@ so instead we can use a trick to filter similar subdomains. and print only uniqu
 
 I’m going to use twitter.com as an example :
 
-## subdomain enumeration <a href="#9dcd" id="9dcd"></a>
+## subdomain enumeration <a href="#id-9dcd" id="id-9dcd"></a>
 
 the first step as expected is to extract the subdomains, we are going to enumerate all the subdomains and save them in a Text file.
 
@@ -32,29 +32,29 @@ you can use your favorite for subdomain enumeration, and save the result in text
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:768/1*bDBwqhimdNqUU9nMrRuTyg.png" alt="" height="755" width="614"><figcaption></figcaption></figure>
 
-### httpx to enumerate live subdomains <a href="#5c0d" id="5c0d"></a>
+### httpx to enumerate live subdomains <a href="#id-5c0d" id="id-5c0d"></a>
 
 now we are going to use httpx tool with these options :
 
-### now we are going to use httpx tool with these options : <a href="#335f" id="335f"></a>
+### now we are going to use httpx tool with these options : <a href="#id-335f" id="id-335f"></a>
 
 ```
 httpx -l subdomains.txt -sc -title -cl -wc -td | tee httpx2.txt
 ```
 
 **-l subdomains.txt**: This flag specifies the input source for subdomains.\
-**-sc**: This flag likely stands for “status code.”\
-**-title**: This flag instructs the tool to extract and display the titles\
-**-cl**: This flag stands for “content length.”\
-**-wc**: This flag stands for “word count.”\
-**-td**: display technology in use based on wappalyzer dataset\
-**| tee httpx2.txt**: This part of the command is using the tee command, which is used to capture the standard output (stdout) of the preceding command and write it to a file. In this case, the output of the httpx command is being captured and written to a file named httpx2.txt.
+&#xNAN;**-sc**: This flag likely stands for “status code.”\
+&#xNAN;**-title**: This flag instructs the tool to extract and display the titles\
+&#xNAN;**-cl**: This flag stands for “content length.”\
+&#xNAN;**-wc**: This flag stands for “word count.”\
+&#xNAN;**-td**: display technology in use based on wappalyzer dataset\
+&#xNAN;**| tee httpx2.txt**: This part of the command is using the tee command, which is used to capture the standard output (stdout) of the preceding command and write it to a file. In this case, the output of the httpx command is being captured and written to a file named httpx2.txt.
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:873/1*hTsYe29KsvW0Hudh9Tpuhw.png" alt="" height="765" width="698"><figcaption></figcaption></figure>
 
 as you can see, there are so many subdomains has the same HTTP status code & Title & content length.
 
-### awk to filter the duplicate subdomains <a href="#3fa2" id="3fa2"></a>
+### awk to filter the duplicate subdomains <a href="#id-3fa2" id="id-3fa2"></a>
 
 now after getting the (maybe the same web application on different subdomains ) on our text list , we need to filter theme and print only the unique ones and doing our pen-testing on them . to do this we need to use a tool called awk
 

@@ -4,7 +4,7 @@ description: >-
   https://0xm5awy.medium.com/how-i-got-more-than-100-vulnerabilities-in-just-one-site-zseano-challenge-19bd783fdebf
 ---
 
-# How i got more than 100 vulnerabilities in just one site? (zseano-challenge)
+# 🔎 How i got more than 100 vulnerabilities in just one site? (zseano-challenge)
 
 <figure><img src="https://miro.medium.com/v2/resize:fit:875/1*V6FT8k2xPmhkEoNR92KixA.png" alt="" height="697" width="700"><figcaption></figcaption></figure>
 
@@ -28,48 +28,48 @@ The Streamer could do everything the User could do, and they could also open liv
 
 Now that you understand what the website is and what roles are available, let’s dive into our story!
 
-> On this day, I was watching a video by “ZSeano” ([link](https://www.youtube.com/watch?v=0QFByAYQ\_p0\&t=6s)), where he said, “You should challenge yourself for 12 months on a single target.” This resonated with me, and I decided to take up this challenge with this particular program. I never expected to discover all the vulnerabilities that I will mention below because the scope was very limited, only “my/www/api” domain, and everything else was out of scope. So it was quite a shock for me!
+> On this day, I was watching a video by “ZSeano” ([link](https://www.youtube.com/watch?v=0QFByAYQ_p0\&t=6s)), where he said, “You should challenge yourself for 12 months on a single target.” This resonated with me, and I decided to take up this challenge with this particular program. I never expected to discover all the vulnerabilities that I will mention below because the scope was very limited, only “my/www/api” domain, and everything else was out of scope. So it was quite a shock for me!
 
 **Here are all the vulnerabilities I discovered:**
 
 > _- 30x IDORS_\
-> _- 5x XSS_\
-> _- 7x Access Users/Streamers data_\
-> _- 4x Able to got free tokens by sending negative tokens (I could purchase tokens and send them as support to the Streamer, but when I sent a negative value, it increased the tokens in my account)_\
-> _- 5x CSRF_\
-> _- 4x DoS_\
-> _- 4x CORS_\
-> _- 5x Race condition_\
-> _- 10x 2FA and 2FA bypasses_\
-> _- 8x Open redirects and open redirect bypasses_\
-> _- 5x No rate limit_\
-> _- 1x Ability to execute commands on the Streamer’s chat as a moderator from a normal user’s account_\
-> _- 4x HTML injection_\
-> _- 3x Account takeover_\
-> _- 1x Private messages could be seen even if they were still locked (need to buy to unlock them)_\
-> _- 1x Send unlimited private messages without decreasing the remaining messages (if you bought 10 messages and sent one, your messages would still be 9, and so on)_\
-> _- 1x Broadcasters could approve their own documents (I could accept my own application to become a Streamer without going through the admin)_\
-> _- 1x Password check at account termination flow could be bypassed (you needed to know the account’s password to close it)_\
-> _- 1x Disabled moderators were still able to invite others to VIP shows_\
-> _- 1x Broadcaster could make their own page unavailable by setting a specific allowed value on a post_\
-> _- 1x Streamers could change their identity information_\
-> _- 1x API endpoint returned all the deleted posts_\
-> _- 1x Streamers were able to edit the tokens’ posts from the users_\
-> _- 1x Add performers without the need for confirmation_\
-> _- 1x View all the top tippers \[“userId”, “tokens”, “username”] for all the streamers_\
-> _- 1x Streamer could trick users into unlocking unnecessary videos_\
-> _- 1x Users could delete anyone’s comments on live chats without needing to be a moderator_\
-> _- 1x Disable the login attempt of any user_\
-> _- 1x Bypass the alert screen in the live chat (similar to HackerOne’s alert screen when clicking on a link)_\
-> _- 1x Streamers could bypass the \[User not present on your stream] to invite any user to their stream_\
-> _- 1x Reset password link did not expire after changing our email_\
-> _- 1x Streamers/users could use other streamers’ emotes on their own channel and other channels by using the emote handle_\
-> _- 1x Users could use Streamer Emotes without subscribing to the streamer using the disclosed \`Handles\` in the HTML CODE_\
-> _- 1x Broken OTP authentication_\
-> _- 1x Streamers/users could increase their level from the “xx” endpoint to an unlimited level without buying/sending tokens to anyone. They could unlock gifts for free and more!_\
-> _- 1x Users could change their username to an unlimited number_\
-> _- 1x Metrics file leaked with 580 disclosed emails for \`_[_@test_](http://twitter.com/test)_.com\`, 975 for \`_[_@test_](http://twitter.com/test)_.net\`, and 14700 for \`_[_@gmail_](http://twitter.com/gmail)_\`. Internal endpoints were also leaked._\
-> _- 1x Streamers could change their “Earning Plan” themselves without contacting support._
+> &#xNAN;_- 5x XSS_\
+> &#xNAN;_- 7x Access Users/Streamers data_\
+> &#xNAN;_- 4x Able to got free tokens by sending negative tokens (I could purchase tokens and send them as support to the Streamer, but when I sent a negative value, it increased the tokens in my account)_\
+> &#xNAN;_- 5x CSRF_\
+> &#xNAN;_- 4x DoS_\
+> &#xNAN;_- 4x CORS_\
+> &#xNAN;_- 5x Race condition_\
+> &#xNAN;_- 10x 2FA and 2FA bypasses_\
+> &#xNAN;_- 8x Open redirects and open redirect bypasses_\
+> &#xNAN;_- 5x No rate limit_\
+> &#xNAN;_- 1x Ability to execute commands on the Streamer’s chat as a moderator from a normal user’s account_\
+> &#xNAN;_- 4x HTML injection_\
+> &#xNAN;_- 3x Account takeover_\
+> &#xNAN;_- 1x Private messages could be seen even if they were still locked (need to buy to unlock them)_\
+> &#xNAN;_- 1x Send unlimited private messages without decreasing the remaining messages (if you bought 10 messages and sent one, your messages would still be 9, and so on)_\
+> &#xNAN;_- 1x Broadcasters could approve their own documents (I could accept my own application to become a Streamer without going through the admin)_\
+> &#xNAN;_- 1x Password check at account termination flow could be bypassed (you needed to know the account’s password to close it)_\
+> &#xNAN;_- 1x Disabled moderators were still able to invite others to VIP shows_\
+> &#xNAN;_- 1x Broadcaster could make their own page unavailable by setting a specific allowed value on a post_\
+> &#xNAN;_- 1x Streamers could change their identity information_\
+> &#xNAN;_- 1x API endpoint returned all the deleted posts_\
+> &#xNAN;_- 1x Streamers were able to edit the tokens’ posts from the users_\
+> &#xNAN;_- 1x Add performers without the need for confirmation_\
+> &#xNAN;_- 1x View all the top tippers \[“userId”, “tokens”, “username”] for all the streamers_\
+> &#xNAN;_- 1x Streamer could trick users into unlocking unnecessary videos_\
+> &#xNAN;_- 1x Users could delete anyone’s comments on live chats without needing to be a moderator_\
+> &#xNAN;_- 1x Disable the login attempt of any user_\
+> &#xNAN;_- 1x Bypass the alert screen in the live chat (similar to HackerOne’s alert screen when clicking on a link)_\
+> &#xNAN;_- 1x Streamers could bypass the \[User not present on your stream] to invite any user to their stream_\
+> &#xNAN;_- 1x Reset password link did not expire after changing our email_\
+> &#xNAN;_- 1x Streamers/users could use other streamers’ emotes on their own channel and other channels by using the emote handle_\
+> &#xNAN;_- 1x Users could use Streamer Emotes without subscribing to the streamer using the disclosed \`Handles\` in the HTML CODE_\
+> &#xNAN;_- 1x Broken OTP authentication_\
+> &#xNAN;_- 1x Streamers/users could increase their level from the “xx” endpoint to an unlimited level without buying/sending tokens to anyone. They could unlock gifts for free and more!_\
+> &#xNAN;_- 1x Users could change their username to an unlimited number_\
+> &#xNAN;_- 1x Metrics file leaked with 580 disclosed emails for \`_[_@test_](http://twitter.com/test)_.com\`, 975 for \`_[_@test_](http://twitter.com/test)_.net\`, and 14700 for \`_[_@gmail_](http://twitter.com/gmail)_\`. Internal endpoints were also leaked._\
+> &#xNAN;_- 1x Streamers could change their “Earning Plan” themselves without contacting support._
 
 This is all the vulnerabilities that I remember, and I think there are more than this, but I didn’t add them :DD
 
@@ -84,7 +84,7 @@ When I finished working on the website, I left the program for a while until I l
 When I finished with the API, I left the program again until I was asked to become a streamer, and I got it! Now, it was time to work on the streamer’s dashboard on the domain “my.” Here, I decided to pause for a while until I finished working on access control and business logic for the following user and user role:
 
 > _user / user role_\
-> _user / streamer role_
+> &#xNAN;_&#x75;ser / streamer role_
 
 When I finished, I discovered many vulnerabilities, such as tokens, users’ data, and more, as mentioned in the vulnerability names above. Now, it was time to work on the streamer and streamer role.
 
@@ -92,7 +92,7 @@ I discovered more than 50% of my vulnerabilities here. I think they believed tha
 
 This was all by January 1, 2023. But today, February 7, 2023, did I stop there? From the first date to the second, I discovered many vulnerabilities that I hadn’t seen before or my focus wasn’t good enough. So, it’s always good to retest periodically from the beginning. Here, I mean that you should treat yourself as if you are still new to the website because every day, the source code is renewed, and new things are added or modified. Therefore, there will be new errors :DD. This was my story in simplicity, what I did, and I think it’s time for the tips.
 
-1. Watch this video: \[[link](https://www.youtube.com/watch?v=0QFByAYQ\_p0\&t=6s)]
+1. Watch this video: \[[link](https://www.youtube.com/watch?v=0QFByAYQ_p0\&t=6s)]
 2. Most of my bugs in this site was protected on the front-end but when i try it on back-end its works so don’t trust The front-end only you must check the back-end as well .
 3. Tools matter a lot less than you think. ( all my bugs are 100% manual )
 4. Don’t stop learning. Challenge yourself! As soon as a hobby gets boring or repetitive, it’s now become work. Try something new, pick up a challenging program that you think might be impossible. You will be surprised!

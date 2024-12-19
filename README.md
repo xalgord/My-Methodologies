@@ -12,6 +12,16 @@ description: 'description: For Personal Reference'
 
 * [https://github.com/epinna/weevely3](https://github.com/epinna/weevely3)
 
+### Common Ports for a web Application:&#x20;
+
+{% code overflow="wrap" %}
+```
+20, 21, 22, 23, 25, 53, 67, 68, 69, 80, 110, 123, 137, 138, 139, 143, 161, 162, 179, 194, 389, 443, 465, 514, 515, 587, 631, 636, 989, 990, 993, 995, 1080, 1433, 1521, 1723, 3306, 3389, 5432, 5900, 6379, 8000, 8080, 8443, 9000, 9200, 27017, 50000
+```
+{% endcode %}
+
+
+
 **Set domain scope (burpsuite)**
 
 ```

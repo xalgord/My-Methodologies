@@ -4,6 +4,8 @@ description: 'description: For Personal Reference'
 
 # 🧑‍🏫 My Methodologies
 
+{% embed url="https://github.com/xalgord" %}
+
 #### Gathering Breached Credentials
 
 * [https://github.com/hmaverickadams/breach-parse](https://github.com/hmaverickadams/breach-parse)

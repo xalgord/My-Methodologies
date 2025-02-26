@@ -56,3 +56,10 @@ awk -F[/.] 'NF > 5' subdomains.txt
 ```bash
 cat cl.txt | awk '{print $NF, $0}' | sort -u -k1,1 | cut -d' ' -f2- 
 ```
+
+
+
+### Upload shell via SQLmap into Database
+
+{% embed url="https://www.youtube.com/watch?v=FjgKtBAiLKQ" %}
+

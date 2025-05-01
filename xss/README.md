@@ -53,4 +53,10 @@ testing'-alert(2)-'xss
 
 Encoding Bypass:
 
-[https://d3adend.org/xss/ghettoBypass](https://d3adend.org/xss/ghettoBypass)
+{% embed url="https://d3adend.org/xss/ghettoBypass" %}
+
+
+
+Deface XSS Templates:
+
+{% embed url="https://deface.prinsh.com/#home" %}
